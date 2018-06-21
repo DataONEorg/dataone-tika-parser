@@ -7,13 +7,12 @@ import java.io.IOException;
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
-import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.xml.sax.SAXException;
 
-public class GetMetadata {
+public class GetMetadata_Onedcx {
 	
    public static void main(final String[] args) throws IOException, TikaException, SAXException {
 	
@@ -29,14 +28,14 @@ public class GetMetadata {
       
       //Parser method parameters
       //Parser parser = new AutoDetectParser();
-      Parser parser = new dataone_onedcx();
+      Parser parser = new OnedcxParser();
       BodyContentHandler handler = new BodyContentHandler();
       Metadata metadata = new Metadata();
       FileInputStream inputstream = new FileInputStream(file);
       ParseContext context = new ParseContext();
       
       parser.parse(inputstream, handler, metadata, context);
-      //System.out.println(handler.toString());
+      System.out.println(handler.toString());
 
       //getting the list of all meta data elements 
       String[] metadataNames = metadata.names();
