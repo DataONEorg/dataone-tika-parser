@@ -16,12 +16,14 @@ import org.apache.tika.sax.TeeContentHandler;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
 import org.apache.tika.parser.xml.DcXMLParser;
+import org.apache.tika.parser.xml.XMLParser;
 import org.apache.tika.parser.xml.ElementMetadataHandler;
+import org.apache.tika.sax.XHTMLContentHandler;
 
 /**
  * Dublin Core metadata parser
  */
-public class OnedcxParser extends DcXMLParser {
+public class OnedcxParser extends XMLParser {
 
     /** Serial version UID */
     private static final long serialVersionUID = 4905318835463880819L;
@@ -33,14 +35,13 @@ public class OnedcxParser extends DcXMLParser {
             return SUPPORTED_TYPES;
     }
     
-    public void parse(
-            InputStream stream, ContentHandler handler,
-            Metadata metadata, ParseContext context)
-            throws IOException, SAXException, TikaException {
-
-    		metadata.set(Metadata.CONTENT_TYPE, ONEDCX_MIME_TYPE);
-    		metadata.set("text/xml", "text/xml; formatid=\"http\\:\\/\\/ns.dataone.org\\/metadata\\/schema\\/onedcx\\/v1.0\"");
-    }
+//    public void parse(
+//            InputStream stream, ContentHandler handler,
+//            Metadata metadata, ParseContext context)
+//            throws IOException, SAXException, TikaException {
+//    		metadata.set(Metadata.CONTENT_TYPE, ONEDCX_MIME_TYPE);
+//    		metadata.set("Title", "2006 Ice Watch Joint Ocean Ice Study (JOIS) Sea Ice Observation Program");
+//    }
 
     private static ContentHandler getDublinCoreHandler(
             Metadata metadata, Property property, String element) {
@@ -49,15 +50,15 @@ public class OnedcxParser extends DcXMLParser {
                 metadata, property);
     }
 
-//    protected ContentHandler getContentHandler(
-//            ContentHandler handler, Metadata metadata, ParseContext context) {
-//        metadata.set(Metadata.CONTENT_TYPE, ONEDCX_MIME_TYPE);
-//        metadata.set("text/xml", "text/xml; formatid=\"http\\:\\/\\/ns.dataone.org\\/metadata\\/schema\\/onedcx\\/v1.0-PRatik\"");
-//
-//        return new TeeContentHandler(
-//                super.getContentHandler(handler, metadata, context),
-//                getDublinCoreHandler(metadata, TikaCoreProperties.TITLE, "title"),
-//   //             getDublinCoreHandler(metadata, TikaCoreProperties.SUBJECT, "subject"),
+    protected ContentHandler getContentHandler(
+            ContentHandler handler, Metadata metadata, ParseContext context) {
+        metadata.set(Metadata.CONTENT_TYPE, ONEDCX_MIME_TYPE);
+        metadata.set("text/xml", "text/xml; formatid=\"http\\:\\/\\/ns.dataone.org\\/metadata\\/schema\\/onedcx\\/v1.0-PRatik\"");
+
+        return new TeeContentHandler(
+                super.getContentHandler(handler, metadata, context),
+                getDublinCoreHandler(metadata, TikaCoreProperties.TITLE, "title")
+   //             getDublinCoreHandler(metadata, TikaCoreProperties.SUBJECT, "subject"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.CREATOR, "creator"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.DESCRIPTION, "description"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.PUBLISHER, "publisher"),
@@ -67,7 +68,8 @@ public class OnedcxParser extends DcXMLParser {
 //                getDublinCoreHandler(metadata, TikaCoreProperties.FORMAT, "format"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.LANGUAGE, "language"),
-//                getDublinCoreHandler(metadata, TikaCoreProperties.RIGHTS, "rights"));
-//    }
+//                getDublinCoreHandler(metadata, TikaCoreProperties.RIGHTS, "rights")
+                );
+    }
 
 }

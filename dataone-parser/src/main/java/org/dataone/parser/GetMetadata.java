@@ -28,8 +28,8 @@ public class GetMetadata {
       System.out.println(filetype);
       
       //Parser method parameters
-      //Parser parser = new AutoDetectParser();
-      Parser parser = new dataone_onedcx();
+      Parser parser = new AutoDetectParser();
+      //Parser parser = new dataone_onedcx();
       BodyContentHandler handler = new BodyContentHandler();
       Metadata metadata = new Metadata();
       FileInputStream inputstream = new FileInputStream(file);

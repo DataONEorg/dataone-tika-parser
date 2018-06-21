@@ -28,6 +28,7 @@ public class GetMetadata_Onedcx {
       
       //Parser method parameters
       //Parser parser = new AutoDetectParser();
+      //Parser parser = new DcXMLParser();
       Parser parser = new OnedcxParser();
       BodyContentHandler handler = new BodyContentHandler();
       Metadata metadata = new Metadata();
@@ -41,7 +42,7 @@ public class GetMetadata_Onedcx {
       String[] metadataNames = metadata.names();
       
       for(String name : metadataNames) {		        
-         System.out.println(file + ": " + metadata.get(name));
+         System.out.println(file + ": " +"Names: "  + name + ": "+ metadata.get(name));
       }
       
    }
