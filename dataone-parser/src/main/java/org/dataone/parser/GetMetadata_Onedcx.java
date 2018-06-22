@@ -36,7 +36,7 @@ public class GetMetadata_Onedcx {
       ParseContext context = new ParseContext();
       
       parser.parse(inputstream, handler, metadata, context);
-      System.out.println(handler.toString());
+      //System.out.println(handler.toString());
 
       //getting the list of all meta data elements 
       String[] metadataNames = metadata.names();

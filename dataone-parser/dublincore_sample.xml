@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="/webservices/catalog/xsl/searchRetrieveResponse.xsl"?>
+
+<searchRetrieveResponse xmlns="http://www.loc.gov/zing/srw/" xmlns:oclcterms="http://purl.org/oclc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:diag="http://www.loc.gov/zing/srw/diagnostic/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<version>1.1</version>
+<numberOfRecords>33587</numberOfRecords>
+<records>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Snelling, Lauraine.</dc:creator>
+<dc:date>c2003</dc:date>
+<dc:description>"Ruby Torvald sets out on a daunting journey with her young sister, Opal, to hopefully see their long-lost father once more and claim the promised inheritance. But instead of the treasure they expected, the sisters discover something most shocking." -- Book Cover.</dc:description>
+<dc:format>320 p. ; 22 cm.</dc:format>
+<dc:identifier>0764290762</dc:identifier>
+<dc:identifier>9780764290763</dc:identifier>
+<dc:identifier>0764222228</dc:identifier>
+<dc:identifier>9780764222221</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Bethany House Publishers</dc:publisher>
+<dc:relation>Dakotah treasures ; 1</dc:relation>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Inheritance and succession--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Fathers and daughters--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Women pioneers--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Sisters--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Medora (N.D.)--Fiction.</dc:subject>
+<dc:title>Ruby </dc:title>
+<dc:type>Christian fiction.</dc:type>
+<dc:type>Western stories.</dc:type>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">030206</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2003002571</oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>51647374</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Creech, Sharon.</dc:creator>
+<dc:date>c2002</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>Thirteen-year-old fraternal twins Dallas and Florida have grown up in a terrible orphanage but their lives change forever when an eccentric but sweet older couple invites them each on an adventure, beginning in an almost magical place called Ruby Holler.</dc:description>
+<dc:description>The Silver Bird -- The Boxton Creek Home -- Ruby Holler -- Mush -- Thinking Corners -- The Opportunity -- Doubts -- Hansel and Gretel -- The God -- The Egg -- The Grump -- Work -- Gravy -- Wood -- Conversations in the Night -- The Axe -- The Rocker -- The Trepids -- Understone Funds -- Through the Holler -- Lost and Found -- A Trip to Boxton -- Ready -- Tiller and Sairy -- The Holler at Night -- Shack Talk -- Trials -- Mrs. Trepid -- Decisions -- Nightmares -- Medicine -- Paddling and Hiking -- Z's Report -- Bearings -- Stiff -- A Long Chain -- Word Pictures -- Surveying -- The Worrywarts -- Babies in the Box -- Shopping -- Dorkhead -- Loops -- Progress -- The Rock -- Stones in the Holler -- Running -- More Shopping -- Underwater -- The Feeling -- Z -- The One-Log Raft -- The Dunces -- Slow Motion -- On the Road -- On the River -- The Soggy Heart -- Preparations -- Investments -- Hospital Talk -- Mr. Trepid's Adventure -- Jewels -- Mission-Accomplished Cake -- Appraisals -- Conversations in the Night -- Dreams.</dc:description>
+<dc:format>310 p. ; 22 cm.</dc:format>
+<dc:identifier>0060277327</dc:identifier>
+<dc:identifier>9780060277321</dc:identifier>
+<dc:identifier>0060277335 (lib. bdg)</dc:identifier>
+<dc:identifier>9780060277338 (lib. bdg)</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Joanna Cotler Books/Harper Collins Publishers</dc:publisher>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/description/hc041/00066371.html</dc:relation>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Orphans--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Twins--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Brothers and sisters--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Wood-carvers--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Country life--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Voyages and travels--Juvenile fiction.</dc:subject>
+<dc:title>Ruby Holler </dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">001109</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   00066371 </oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>45487314</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Bridges, Ruby.</dc:creator>
+<dc:date>1999</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>Ruby Bridges recounts the story of her involvement, as a six-year-old, in the integration of her school in New Orleans in 1960.</dc:description>
+<dc:description>green dot</dc:description>
+<dc:format>63 p. : ill. ; 28 cm.</dc:format>
+<dc:identifier>0590189239 (hc)</dc:identifier>
+<dc:identifier>9780590189231 (hc)</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Scholastic Press</dc:publisher>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Bridges, Ruby--Juvenile literature.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">African American children--Louisiana--New Orleans--Biography--Juvenile literature.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">African Americans--Louisiana--New Orleans--Biography--Juvenile literature.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">School integration--Louisiana--New Orleans--Juvenile literature.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">New Orleans (La.)--Race relations--Juvenile literature.</dc:subject>
+<dc:title>Through my eyes </dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">981216</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   98049242 </oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>40588556</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Andrews, V. C. (Virginia C.)</dc:creator>
+<dc:date>c1994</dc:date>
+<dc:description>growing up in the heart of Cajun country, the only family Ruby Landry has ever known are her loving ghuardian Jack, a drunken outcast who lives alone in a shack in the swamp.</dc:description>
+<dc:format>442 p. ; 23 cm.</dc:format>
+<dc:identifier>0671759353</dc:identifier>
+<dc:identifier>9780671759353</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Pocket Books</dc:publisher>
+<dc:subject>Aileler--Roman.</dc:subject>
+<dc:subject>Luizana--Roman.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Families--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Louisiana--Fiction.</dc:subject>
+<dc:title>Ruby </dc:title>
+<dc:type>Romantic suspense novels.</dc:type>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">940608</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   94168748 </oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>29631416</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Emberley, Michael.</dc:creator>
+<dc:date>c1990</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>While taking cheese pies to her Granny, Ruby, a small but tough-minded little mouse, forgets her mother's advice not to talk to cats. Story is a variation on Red Riding Hood.</dc:description>
+<dc:format>[25] p. : col. ill. ; 21 cm.</dc:format>
+<dc:identifier>0316236438 (lib. bdg.) </dc:identifier>
+<dc:identifier>9780316236430 (lib. bdg.)</dc:identifier>
+<dc:identifier>0316236608 (pbk.)</dc:identifier>
+<dc:identifier>9780316236607 (pbk.)</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Little, Brown</dc:publisher>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Mice--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cats--Juvenile fiction.</dc:subject>
+<dc:title>Ruby </dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">890511</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">   89012108 </oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>19774282</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Ruby, Laura.</dc:creator>
+<dc:date>2007</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>Loopy -- Restoration -- Ballad of the Barbie feet -- Dear psycho -- Safekeeping -- Picture of health -- I'm not Julia Roberts -- The bunko bunny -- The dog next door -- Hug machine.</dc:description>
+<dc:format>251 p. : ill. ; 22 cm.</dc:format>
+<dc:identifier>0446578746</dc:identifier>
+<dc:identifier>9780446578745</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Warner Books</dc:publisher>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/toc/ecip069/2006006832.html</dc:relation>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Stepmothers--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Stepfamilies--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Illinois--Fiction.</dc:subject>
+<dc:title>I'm not Julia Roberts </dc:title>
+<dc:title>I am not Julia Roberts</dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">060227</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2006006832</oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>64442891</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Ruby, Laura.</dc:creator>
+<dc:date>c2007</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>Thirteen-year-old Georgie and Bug, a year older, have been pulled apart by the demands of their newfound fame and fortune, but join forces again when a punk, vampires, a giant sloth, and other creatures come after them on the streets of a New York City of the future.</dc:description>
+<dc:format>325 p. ; 22 cm.</dc:format>
+<dc:identifier>9780060752583 (trade bdg.)</dc:identifier>
+<dc:identifier>9780060752590 (lib. bdg.)</dc:identifier>
+<dc:identifier>0060752580</dc:identifier>
+<dc:identifier>0060752599</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Eos</dc:publisher>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/enhancements/fy0911/2007008621-b.html</dc:relation>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/enhancements/fy0911/2007008621-d.html</dc:relation>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Fame--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Wealth--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Supernatural--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Books and reading--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cats--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Flight--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">New York (N.Y.)--Juvenile fiction.</dc:subject>
+<dc:title>The chaos king </dc:title>
+<dc:type>Fantasy fiction.</dc:type>
+<dc:type>Children's stories.</dc:type>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">070329</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2007008621</oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>122309000</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Ruby, Laura.</dc:creator>
+<dc:date>c2009</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>Tola Riley, a high school junior, struggles to tell the truth when she and her art teacher are accused of having an affair.</dc:description>
+<dc:format>247 p. ; 22 cm.</dc:format>
+<dc:identifier>9780061243301 (trade bdg.)</dc:identifier>
+<dc:identifier>0061243302 (trade bdg.)</dc:identifier>
+<dc:identifier>9780061243325 (lib. bdg.)</dc:identifier>
+<dc:identifier>0061243329 (lib. bdg.)</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>HarperTeen</dc:publisher>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Teacher-student relationships--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cyberbullying--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">High schools--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Schools--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Family problems--Fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Divorce--Fiction.</dc:subject>
+<dc:title>Bad apple </dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">090128</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2009001409</oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>300462588</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Ruby, Laura.</dc:creator>
+<dc:date>c2006</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>In a future New York where most people can fly and cats are a rarity, a nondescript resident of Hope House for the Homeless and Hopeless discovers that although she is shunned as a "leadfoot," she has the surprising ability to become invisible.</dc:description>
+<dc:format>327 p. ; 22 cm.</dc:format>
+<dc:identifier>0060752556</dc:identifier>
+<dc:identifier>0060752564 (lib. bdg.)</dc:identifier>
+<dc:identifier>9780060752552</dc:identifier>
+<dc:identifier>9780060752569</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>Eos</dc:publisher>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/toc/ecip0518/2005023170.html</dc:relation>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/enhancements/fy0910/2005023170-b.html</dc:relation>
+<dc:relation xsi:type="http://purl.org/dc/terms/URI">http://www.loc.gov/catdir/enhancements/fy0910/2005023170-d.html</dc:relation>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Orphans--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Orphanages--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Cats--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Flight--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Gangsters--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">New York (N.Y.)--Juvenile fiction.</dc:subject>
+<dc:title>The Wall and the Wing </dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">050816</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2005023170</oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>61451492</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+<record>
+<recordSchema>info:srw/schema/1/dc</recordSchema>
+<recordPacking>xml</recordPacking>
+<recordData>
+<oclcdcs>
+<dc:creator>Ruby, Laura.</dc:creator>
+<dc:date>c2006</dc:date>
+<dc:description>1st ed.</dc:description>
+<dc:description>Sixteen-year-old high school senior Audrey is humiliated when a compromising photograph of her is sent around her school, but she discovers a toughness within her that she never knew she had.</dc:description>
+<dc:format>274 p. ; 22 cm.</dc:format>
+<dc:identifier>0060882239 (trade bdg.)</dc:identifier>
+<dc:identifier>9780060882235 (trade bdg.)</dc:identifier>
+<dc:identifier>0060882247 (lib. bdg.)</dc:identifier>
+<dc:identifier>9780060882242 (lib. bdg.)</dc:identifier>
+<dc:language xsi:type="http://purl.org/dc/terms/ISO639-2">eng</dc:language>
+<dc:publisher>HarperTempest</dc:publisher>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Interpersonal relations--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Sex--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Conduct of life--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">High schools--Juvenile fiction.</dc:subject>
+<dc:subject xsi:type="http://purl.org/dc/terms/LCSH">Schools--Juvenile fiction.</dc:subject>
+<dc:title>Good girls </dc:title>
+<dc:type>Text</dc:type>
+<oclcterms:recordCreationDate xsi:type="http://purl.org/oclc/terms/marc008date">060125</oclcterms:recordCreationDate>
+<oclcterms:recordIdentifier xsi:type="http://purl.org/oclc/terms/lccn">  2006000340</oclcterms:recordIdentifier>
+<oclcterms:recordIdentifier>63187390</oclcterms:recordIdentifier>
+</oclcdcs>
+</recordData>
+</record>
+</records>
+<nextRecordPosition>11</nextRecordPosition>
+<resultSetIdleTime/>
+<echoedSearchRetrieveRequest xmlns:srw="http://www.loc.gov/zing/srw/">
+<version>1.1</version>
+<query>ruby</query>
+<maximumRecords>10</maximumRecords>
+<recordPacking>xml</recordPacking>
+<startRecord>1</startRecord>
+<sortKeys>relevance</sortKeys>
+<servicelevel>default</servicelevel>
+</echoedSearchRetrieveRequest>
+</searchRetrieveResponse>
