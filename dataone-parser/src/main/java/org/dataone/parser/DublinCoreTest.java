@@ -27,10 +27,11 @@ public class DublinCoreTest {
 		//parser.parse(inputstream, handler, metadata, pcontext);
 		
 		// DcXMLParser 
-		//Parser parser = new DcXMLParser();
+		Parser parser = new DublinCoreXML();
 		
 		// OneDcxParser
-		Parser parser = new OnedcxParser();
+		//Parser parser = new OnedcxParser();
+		
 		parser.parse(inputstream, handler, metadata, pcontext);
 		//System.out.println("Handler Content of the document: ");
 		//System.out.println(handler);

@@ -44,8 +44,6 @@ public class OnedcxParser extends XMLParser  {
 
     private static ContentHandler getDublinCoreHandler(
             Metadata metadata, Property property, String element) {
-    	
-    	System.out.println(Onedcx.NAMESPACE_URI_DC);
         return new ElementMetadataHandler(
                 Onedcx.NAMESPACE_URI_DC, element,
                 metadata, property);
@@ -53,7 +51,7 @@ public class OnedcxParser extends XMLParser  {
 
     protected ContentHandler getContentHandler(
             ContentHandler handler, Metadata metadata, ParseContext context) {
-    	metadata.set(Metadata.CONTENT_TYPE, ONEDCX_MIME_TYPE);
+    		metadata.set(Metadata.CONTENT_TYPE, ONEDCX_MIME_TYPE);
     	
     	
         return new TeeContentHandler(

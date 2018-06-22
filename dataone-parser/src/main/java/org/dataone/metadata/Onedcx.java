@@ -10,7 +10,7 @@ import org.apache.tika.metadata.Property;
  */
 public interface Onedcx {
 
-    public static final String NAMESPACE_URI_DC = "http://purl.org/dc/elements/1.1/";
+    public static final String NAMESPACE_URI_DC = "http://purl.org/dc/terms/";
     public static final String NAMESPACE_URI_DC_TERMS = "http://purl.org/dc/terms/";
     public static final String PREFIX_DC = "dc";
     public static final String PREFIX_DC_TERMS = "dcterms";
