@@ -42,7 +42,7 @@ public class GetMetadata_Onedcx {
       String[] metadataNames = metadata.names();
       
       for(String name : metadataNames) {		        
-         System.out.println(file + ": " +"Names: "  + name + ": "+ metadata.get(name));
+         System.out.println(name + ": "+ metadata.get(name));
       }
       
    }
