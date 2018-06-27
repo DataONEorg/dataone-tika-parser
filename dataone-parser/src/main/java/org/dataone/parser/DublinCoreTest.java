@@ -40,11 +40,7 @@ public class DublinCoreTest {
 
 		for(String name : metadataNames) {
 			System.out.println(name + ": " + metadata.get(name));
-		    if (name == "Your Particular Tag"){ //here you can check if the tag names are the particular ones you need and do what you want with them
-		        System.out.println(name + ": " + metadata.get(name));
 		    }
-		}
-
 	}
 	
 }

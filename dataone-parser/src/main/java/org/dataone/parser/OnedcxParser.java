@@ -79,7 +79,7 @@ public class OnedcxParser extends XMLParser  {
 						super.getContentHandler(handler, metadata, context),
 						getDublinCoreHandler(metadata, Onedcx.ABSTRACT, "abstract"),
 						getDublinCoreHandler(metadata, Onedcx.AUTHOR, "author"),
-						getDublinCoreHandler(metadata, Onedcx.AUTHOR, "authorSurName"),
+						getDublinCoreHandler(metadata, Onedcx.AUTHORSURNAME, "authorSurName"),
 						getDublinCoreHandler(metadata, Onedcx.AUTHOR, "authorSurNameSort"),
 						getDublinCoreHandler(metadata, Onedcx.AUTHOR, "contactOrganization"),
 						getDublinCoreHandler(metadata, Onedcx.AUTHOR, "investigator"),
@@ -103,7 +103,9 @@ public class OnedcxParser extends XMLParser  {
 						getDublinCoreHandler(metadata, TikaCoreProperties.FORMAT, "format"),
 						getDublinCoreHandler(metadata, TikaCoreProperties.IDENTIFIER, "identifier"),
 						getDublinCoreHandler(metadata, TikaCoreProperties.LANGUAGE, "language"),
-						getDublinCoreHandler(metadata, TikaCoreProperties.RIGHTS, "rights")
+						getDublinCoreHandler(metadata, TikaCoreProperties.RIGHTS, "rights"),
+						getDublinCoreHandler(metadata, Onedcx.TEMPORAL, "temporal"),
+						getDublinCoreHandler(metadata, Onedcx.SPATIAL, "spatial")
     				);
     }
 

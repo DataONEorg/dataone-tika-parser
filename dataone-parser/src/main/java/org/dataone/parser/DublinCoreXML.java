@@ -31,6 +31,7 @@ public class DublinCoreXML extends XMLParser {
         return new TeeContentHandler(
                 super.getContentHandler(handler, metadata, context),
                 getDublinCoreHandler(metadata, TikaCoreProperties.TITLE, "title"),
+                getDublinCoreHandler(metadata, TikaCoreProperties.DESCRIPTION, "recordSchema"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.KEYWORDS, "subject"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.CREATOR, "creator"),
 //                getDublinCoreHandler(metadata, TikaCoreProperties.DESCRIPTION, "description"),

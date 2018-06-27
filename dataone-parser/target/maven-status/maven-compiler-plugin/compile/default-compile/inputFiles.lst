@@ -1,6 +1,11 @@
 /Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/Typedetection.java
 /Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/GetMetadata_Onedcx.java
+/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/Eml211Parser.java
+/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/metadata/Eml211.java
+/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/DublinCoreXML.java
+/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/metadata/Onedcx.java
 /Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/DublinCoreTest.java
 /Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/OnedcxParser.java
 /Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/App.java
 /Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/GetMetadata.java
+/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/src/main/java/org/dataone/parser/GetMetadata_Eml211.java

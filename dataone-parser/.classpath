@@ -52,5 +52,23 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/uima/uimaj-core/2.9.0/uimaj-core-2.9.0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.uima"/>
+			<attribute name="maven.artifactId" value="uimaj-core"/>
+			<attribute name="maven.version" value="2.9.0"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/james/apache-mime4j-dom/0.8.1/apache-mime4j-dom-0.8.1.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.james"/>
+			<attribute name="maven.artifactId" value="apache-mime4j-dom"/>
+			<attribute name="maven.version" value="0.8.1"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
