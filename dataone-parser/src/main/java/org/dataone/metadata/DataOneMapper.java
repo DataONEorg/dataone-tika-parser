@@ -8,20 +8,22 @@ import java.util.Map;
 
 public class DataOneMapper
 {	
-	private Map<String, List<String>> metadataMap = new HashMap<String, List<String>>();
+	public Map<String, List<String>> metadataMap = new HashMap<String, List<String>>();
 	public List<String> titles = new ArrayList<String>();
+	public List<String> spatial = new ArrayList<String>();
 	public List<String> abstracts = new ArrayList<String>();
 	public List<String> authors = new ArrayList<String>();
 	public List<String> keywords = new ArrayList<String>();
 
 	
-	public Map<String, List<String>> DataOneMapper() {
+	public DataOneMapper() {
 		metadataMap.put("title",addTitles());
 		metadataMap.put("abstract",addAbstracts());
 		metadataMap.put("keyword",addKeywords());
+		metadataMap.put("spatial",addSpatial());
 		
 		//System.out.println(metadataMap.values().toString());
-		return metadataMap;
+		//return metadataMap;
 	}
 	
 	private List<String> addTitles() {
@@ -46,15 +48,15 @@ public class DataOneMapper
 	
 	private List<String> addSpatial() {
 		
-		keywords.add("spatial");
-		keywords.add("boundingCoordinates");
-		keywords.add("westBoundingCoordinate");
-		keywords.add("eastBoundingCoordinate");
-		keywords.add("northBoundingCoordinate");
-		keywords.add("southBoundingCoordinate");
+		spatial.add("spatial");
+		spatial.add("boundingCoordinates");
+		spatial.add("westBoundingCoordinate");
+		spatial.add("eastBoundingCoordinate");
+		spatial.add("northBoundingCoordinate");
+		spatial.add("southBoundingCoordinate");
 		
 		//keywords.add(Eml211.KEYWORDS.toString());
-		return keywords;
+		return spatial;
 	}
 
 }

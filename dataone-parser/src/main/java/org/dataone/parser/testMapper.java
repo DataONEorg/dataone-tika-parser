@@ -14,9 +14,9 @@ public class testMapper {
 	 public static void main(String[] args) {
 		 
 		 DataOneMapper dataOneMapper = new DataOneMapper();
-		 dataOneMapper.DataOneMapper();
-		 System.out.println(dataOneMapper.DataOneMapper().keySet());
-		 System.out.println(dataOneMapper.DataOneMapper().values());
+		 //dataOneMapper.DataOneMapper();
+		// System.out.println(dataOneMapper.DataOneMapper().keySet());
+		 System.out.println(dataOneMapper.metadataMap.get("spatial"));
 		 
 	 }
 
