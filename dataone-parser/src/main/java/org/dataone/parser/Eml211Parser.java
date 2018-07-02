@@ -40,14 +40,16 @@ public class Eml211Parser extends XMLParser  {
     /** Serial version UID */
     private static final long serialVersionUID = 4905318835463880819L;
     private static final Set<MediaType> SUPPORTED_TYPES = Collections.singleton(MediaType.application("eml-211"));
-    public static final String Eml211_MIME_TYPE = "text/xml; formatid=\"" + Eml211.NAMESPACE_URI+"\"";
+    //public static final String Eml211_MIME_TYPE = "text/xml; formatid=\"" + Eml211.NAMESPACE_URI+"\"";
+    public static final String Eml211_MIME_TYPE = "text/xml; formatid=\"" + "eml://ecoinformatics.org/eml-2.1.1" +"\"";
 
     private static ContentHandler getEMLCoreHandler(
             Metadata metadata, Property property, String element) {
     	
     		//System.out.println(element+metadata+property);
         return new ElementMetadataHandler(
-                Eml211.NAMESPACE_URI,
+               // Eml211.NAMESPACE_URI,
+        		"eml://ecoinformatics.org/eml-2.1.1",
         		element,
                 metadata, 
                 property,

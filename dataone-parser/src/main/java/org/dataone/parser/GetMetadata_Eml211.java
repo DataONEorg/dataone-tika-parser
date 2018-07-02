@@ -9,6 +9,8 @@ import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.xml.DcXMLParser;
 import org.apache.tika.parser.txt.TXTParser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.apache.tika.metadata.TikaCoreProperties;
@@ -49,8 +51,7 @@ public class GetMetadata_Eml211 {
       
       for(String name : metadataNames) {		        
          System.out.println(name + ": "+ metadata.get(name));
-      }
-      
+      }      
    }
 
 }
