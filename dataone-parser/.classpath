@@ -70,5 +70,14 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.54/bcprov-jdk15on-1.54.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.bouncycastle"/>
+			<attribute name="maven.artifactId" value="bcprov-jdk15on"/>
+			<attribute name="maven.version" value="1.54"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

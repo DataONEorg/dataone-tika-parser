@@ -1,24 +1,14 @@
 package org.dataone.metadata;
 
 public class EmlTags {
-    private String principal;
-    private String permission;
-    private String organizationName;
-
-
-    public String getPrincipal() {
-        return principal;
+	public String metadata ; 
+	public String value ; 
+	
+	public void setMetadata(String metadata) {
+        this.metadata = metadata;
     }
-
-    public String getPermission() {
-        return permission;
-    }
-
-    public String getorganizationName() {
-        return organizationName;
-    }
-    @Override
-    public String toString() {
-        return "EmlTags [principal:" + principal + ", permission=" + permission +  "]";
+	
+	public void setValue(String value) {
+        this.value = value;
     }
 }

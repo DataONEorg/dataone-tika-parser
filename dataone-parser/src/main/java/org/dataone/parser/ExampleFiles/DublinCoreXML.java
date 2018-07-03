@@ -1,4 +1,4 @@
-package org.dataone.parser;
+package org.dataone.parser.ExampleFiles;
 
 import org.apache.tika.metadata.DublinCore;
 import org.apache.tika.metadata.Metadata;

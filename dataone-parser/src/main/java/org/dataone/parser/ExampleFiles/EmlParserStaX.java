@@ -1,4 +1,4 @@
-package org.dataone.parser;
+package org.dataone.parser.ExampleFiles;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -17,15 +17,12 @@ import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
-public class EmlParser {
-    static final String principal = "principal";
-    static final String EML = "eml";
-    static final String ACCESS="access";
-    
-    public List<EmlTags> readConfig(String configFile) {
-    	List<EmlTags> tags = new ArrayList<EmlTags>();
+public class EmlParserStaX {    
+    public EmlTags readConfig(String configFile) {
+    	//List<EmlTags> tags = new ArrayList<EmlTags>();
 	    XMLInputFactory inputFactory = XMLInputFactory.newInstance();
-	    
+	  
+	    EmlTags eml = new EmlTags();
 	    InputStream in = null;
 		try {
 			in = new FileInputStream(configFile);
@@ -42,14 +39,15 @@ public class EmlParser {
 				if (event.isStartElement()) {
 						 StartElement startElement = event.asStartElement();
 						 System.out.print(startElement.getName().getLocalPart()+ ": ");
+						 eml.setMetadata(startElement.getName().getLocalPart()+ ": ");
 						 event = eventReader.nextEvent();
-		                 
 						 //Immediate element should be Endelement  due to empty tag in XML.
 						 if(event.isEndElement()){
 							// System.out.println(event.asCharacters().getData());
 						 }
 						 else { 
-							 System.out.println(event.asCharacters().getData());
+							 System.out.print(event.asCharacters().getData());
+							 eml.setValue(event.asCharacters().getData());
 							 //System.out.println((event.asCharacters().getData()));
 		                   }
 						//Iterator<Attribute> attributes = startElement.getAttributes();
@@ -69,6 +67,6 @@ public class EmlParser {
 			e.printStackTrace();
 		}
 
-	    return tags;
+	    return eml;
     }
 }

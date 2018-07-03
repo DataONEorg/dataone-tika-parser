@@ -1,4 +1,4 @@
-package org.dataone.parser;
+package org.dataone.parser.ExampleFiles;
 
 import java.io.File;
 import java.io.FileInputStream;

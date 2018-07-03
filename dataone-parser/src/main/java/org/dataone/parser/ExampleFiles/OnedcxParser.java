@@ -1,4 +1,4 @@
-package org.dataone.parser;
+package org.dataone.parser.ExampleFiles;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more

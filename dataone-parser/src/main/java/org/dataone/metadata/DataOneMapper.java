@@ -8,26 +8,25 @@ import java.util.Map;
 
 public class DataOneMapper
 {	
-	public Map<String, List<String>> metadataMap = new HashMap<String, List<String>>();
-	public List<String> titles = new ArrayList<String>();
-	public List<String> spatial = new ArrayList<String>();
-	public List<String> abstracts = new ArrayList<String>();
-	public List<String> authors = new ArrayList<String>();
-	public List<String> keywords = new ArrayList<String>();
-
+	
+	
+	/*
+	 *
+	 *  public Map<String, List<String>> metadataMap = new HashMap<String, List<String>>();
+		public List<String> titles = new ArrayList<String>();
+		public List<String> spatial = new ArrayList<String>();
+		public List<String> abstracts = new ArrayList<String>();
+		public List<String> authors = new ArrayList<String>();
+		public List<String> keywords = new ArrayList<String>();
 	
 	public DataOneMapper() {
 		metadataMap.put("title",addTitles());
 		metadataMap.put("abstract",addAbstracts());
 		metadataMap.put("keyword",addKeywords());
 		metadataMap.put("spatial",addSpatial());
-		
-		//System.out.println(metadataMap.values().toString());
-		//return metadataMap;
+
 	}
-	
-	private List<String> addTitles() {
-		
+	private List<String> addTitles() {	
 		titles.add("title");
 		return titles;
 	}
@@ -49,7 +48,7 @@ public class DataOneMapper
 	private List<String> addSpatial() {
 		
 		spatial.add("spatial");
-		spatial.add("boundingCoordinates");
+		spatial.add("boundingcoordinates");
 		spatial.add("westBoundingCoordinate");
 		spatial.add("eastBoundingCoordinate");
 		spatial.add("northBoundingCoordinate");
@@ -58,5 +57,32 @@ public class DataOneMapper
 		//keywords.add(Eml211.KEYWORDS.toString());
 		return spatial;
 	}
+	
+	*/
 
+	public Map<String, String> metadataMap = new HashMap<String, String>();
+	public DataOneMapper() {
+		
+		
+		metadataMap.put("title","title");
+		metadataMap.put("abstract","abstract");
+		metadataMap.put("keyword","keywords");
+		metadataMap.put("keyword","keywords");
+
+		/*
+		 * Spatial MEtadata Field *
+		 */
+		metadataMap.put("spatial","spatial");
+		metadataMap.put("southBoundingCoordinate","spatial");
+		metadataMap.put("northBoundingCoordinate","spatial");
+		metadataMap.put("eastBoundingCoordinate","spatial");
+
+		/*
+		 * Temporal Metadata Field *
+		 */
+		metadataMap.put("temporal","temporal");
+		metadataMap.put("calendarDate","temporal");
+		metadataMap.put("endDate","temporal");
+		metadataMap.put("beginDate","temporal");
+	}
 }
