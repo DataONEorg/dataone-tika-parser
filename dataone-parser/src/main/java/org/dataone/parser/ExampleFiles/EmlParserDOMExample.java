@@ -21,10 +21,10 @@ public class EmlParserDOMExample {
   XPath xpath = XPathFactory.newInstance().newXPath();
 
   // XPath Query for showing all node name
-  XPathExpression expr_node = xpath.compile("//dataset/keywordSet/*");
+  XPathExpression expr_node = xpath.compile("//dataset/*");
   
   //XPath Query for showing all nodes value
-  XPathExpression expr_val = xpath.compile("//dataset/keywordSet/*/text()");
+  XPathExpression expr_val = xpath.compile("//dataset/*/text()");
   
   Object elements = expr_node.evaluate(doc, XPathConstants.NODESET);
   Object values = expr_val.evaluate(doc, XPathConstants.NODESET);
