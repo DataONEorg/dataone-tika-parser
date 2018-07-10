@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-import org.dataone.metadata.EmlTags;
+//import org.dataone.metadata.EmlTags;
 
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
@@ -18,11 +18,11 @@ import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
 public class EmlParserStaX {    
-    public EmlTags readConfig(String configFile) {
+    public void readConfig(String configFile) {
     	//List<EmlTags> tags = new ArrayList<EmlTags>();
 	    XMLInputFactory inputFactory = XMLInputFactory.newInstance();
 	  
-	    EmlTags eml = new EmlTags();
+	   // EmlTags eml = new EmlTags();
 	    InputStream in = null;
 		try {
 			in = new FileInputStream(configFile);
@@ -39,7 +39,7 @@ public class EmlParserStaX {
 				if (event.isStartElement()) {
 						 StartElement startElement = event.asStartElement();
 						 System.out.print(startElement.getName().getLocalPart()+ ": ");
-						 eml.setMetadata(startElement.getName().getLocalPart()+ ": ");
+			//			 eml.setMetadata(startElement.getName().getLocalPart()+ ": ");
 						 event = eventReader.nextEvent();
 						 //Immediate element should be Endelement  due to empty tag in XML.
 						 if(event.isEndElement()){
@@ -47,7 +47,7 @@ public class EmlParserStaX {
 						 }
 						 else { 
 							 System.out.print(event.asCharacters().getData());
-							 eml.setValue(event.asCharacters().getData());
+					//		 eml.setValue(event.asCharacters().getData());
 							 //System.out.println((event.asCharacters().getData()));
 		                   }
 						//Iterator<Attribute> attributes = startElement.getAttributes();
@@ -67,6 +67,6 @@ public class EmlParserStaX {
 			e.printStackTrace();
 		}
 
-	    return eml;
+	   // return eml;
     }
 }

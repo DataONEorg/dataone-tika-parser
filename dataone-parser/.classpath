@@ -79,5 +79,14 @@
 			<attribute name="maven.scope" value="compile"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/sis/core/sis-utility/0.8/sis-utility-0.8.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.apache.sis.core"/>
+			<attribute name="maven.artifactId" value="sis-utility"/>
+			<attribute name="maven.version" value="0.8"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -1,4 +1,4 @@
-package org.dataone.parser.ExampleFiles;
+package org.dataone.parser;
 
 /*
  * Licensed to the Apache Software Foundation (ASF) under one or more
@@ -19,8 +19,7 @@ package org.dataone.parser.ExampleFiles;
 
 import org.dataone.metadata.Onedcx;
 
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.util.Collections;
 import java.util.Set;
 import org.apache.tika.metadata.Metadata;
@@ -41,7 +40,8 @@ public class OnedcxParser extends XMLParser  {
     private static final long serialVersionUID = 4905318835463880819L;
     private static final Set<MediaType> SUPPORTED_TYPES = Collections.singleton(MediaType.application("onedcx"));
     public static final String ONEDCX_MIME_TYPE = "text/xml; formatid=\"http\\:\\/\\/ns.dataone.org\\/metadata\\/schema\\/onedcx\\/v1.0\"";
-
+    
+    
     private static ContentHandler getDublinCoreHandler(
             Metadata metadata, Property property, String element) {
         return new ElementMetadataHandler(

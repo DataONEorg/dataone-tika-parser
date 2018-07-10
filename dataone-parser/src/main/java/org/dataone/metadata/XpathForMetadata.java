@@ -11,18 +11,19 @@ public class XpathForMetadata {
 	public Map<String, List<String>> Xpaths = new HashMap<String, List<String>>();
 	public List<String> emlXpath = new ArrayList<String>();
 	public List<String> onedcxXpath = new ArrayList<String>();
+	public List<String> defaultXpath = new ArrayList<String>();
 
 	public XpathForMetadata() {
 		
 		/*
+		 *  Default Xpath contains a String message only.
+		 */
+		defaultXpath.add("No Xpath defined for the given file type.");
+		/*
 		 * Xpaths for EML  
 		 */
 		
-		// Get all the root elements at same level. 
-		  //methods/sampling/studyExtent/
-		  //methods/sampling/samplingDescription/
-		  //methods/methodStep/description/section/title
-		  //methods/methodStep/description/section/para
+		// Get all the root elements at same level.
 
 		emlXpath.add("//dataset/*");
 		
@@ -68,9 +69,28 @@ public class XpathForMetadata {
 		emlXpath.add("//dataset/dataTable/attributeList/attribute/measurementScale/nominal/nonNumericDomain/textDomain/*");
 		emlXpath.add("//dataset/dataTable/attributeList/attribute/measurementScale/nominal/nonNumericDomain/enumeratedDomain/*");
 		emlXpath.add("//dataset/dataTable/attributeList/attribute/measurementScale/nominal/nonNumericDomain/enumeratedDomain/codeDefinition/*");
-
 		
 		
+		/*
+		 *  Xpath for the onedcx file format.
+		 */
+		onedcxXpath.add("//metadata/*");
+		onedcxXpath.add("//metadata/simpleDc/*");
+		onedcxXpath.add("//metadata/dcTerms/*");
+	}
+	
+	public List<String> getXpath(int fileType){
+		
+		switch(fileType) {
+		   case 1 :
+		      return emlXpath; 
+		   case 2 :
+			   return onedcxXpath;
+		   
+		   // You can have any number of case statements.
+		   default : // Optional
+			   return defaultXpath;
+		}
 		
 	}
 }

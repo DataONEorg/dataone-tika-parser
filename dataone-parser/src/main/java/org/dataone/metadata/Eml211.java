@@ -5,8 +5,8 @@ import org.apache.tika.metadata.Property;
 
 public interface Eml211 {
 
-    //public static final String NAMESPACE_URI= "eml://ecoinformatics.org/eml-2.1.1";
-    //public static final String NAMESPACE_URI_DC_TERMS = "http://purl.org/dc/terms/";
+     public static final String NAMESPACE_URI= "eml://ecoinformatics.org/eml-2.1.1";
+     public static final String NAMESPACE_URI_DC_TERMS = "http://purl.org/dc/terms/";
     //public static final String PREFIX_DC = "eml";
     //public static final String PREFIX_DC_TERMS = "dcterms";
 

@@ -10,7 +10,9 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
+import org.dataone.parser.OnedcxParser;
 import org.xml.sax.SAXException;
+import java.util.List;
 
 public class GetMetadata_Onedcx {
 	
@@ -40,6 +42,7 @@ public class GetMetadata_Onedcx {
 
       //getting the list of all meta data elements 
       String[] metadataNames = metadata.names();
+      
       
       for(String name : metadataNames) {		        
          System.out.println(name + ": "+ metadata.get(name));
