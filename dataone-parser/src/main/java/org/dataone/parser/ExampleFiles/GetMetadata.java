@@ -3,6 +3,7 @@ package org.dataone.parser.ExampleFiles;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.List;
 
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
@@ -41,8 +42,9 @@ public class GetMetadata {
       //getting the list of all meta data elements 
       String[] metadataNames = metadata.names();
       
+      System.out.println(metadataNames.getClass());
       for(String name : metadataNames) {		        
-         System.out.println(file + ": " + metadata.get(name));
+         System.out.println(name + ": " + metadata.get(name));
       }
       
    }

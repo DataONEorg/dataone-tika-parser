@@ -1,11 +1,25 @@
 package org.dataone.metadata;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.dataone.metadata.emlMetadata;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.apache.tika.exception.TikaException;
+import org.apache.tika.metadata.Metadata;
+import org.apache.tika.parser.AutoDetectParser;
+import org.apache.tika.parser.ParseContext;
+import org.apache.tika.parser.Parser;
+import org.apache.tika.sax.BodyContentHandler;
+import org.dataone.parser.DataOneXMLParser;
+import org.xml.sax.SAXException;
 
 
 
@@ -65,84 +79,94 @@ public class DataOneMapper
 	
 	*/
 
-	public Map<String, String> metadataMap = new HashMap<String, String>();
-	public List<String> metadataFields = new ArrayList<String>();
-	public List<String> defaultField = new ArrayList<String>();
-	
-	public Integer fileTypeNum= 0;
+	public File configFile;
+	public DataOneXMLParser configParser; 
 	
 	public DataOneMapper() {
-		defaultField.add("UnIdentified File Type");
-		metadataMap.put("title","title");
-		metadataMap.put("abstract","abstract");
-		metadataMap.put("keyword","keywords");
-		metadataMap.put("keyword","keywords");
-
-		/*
-		 * Spatial MEtadata Field *
-		 */
-		metadataMap.put("spatial","spatial");
-		metadataMap.put("southBoundingCoordinate","spatial");
-		metadataMap.put("northBoundingCoordinate","spatial");
-		metadataMap.put("eastBoundingCoordinate","spatial");
-
-		/*
-		 * Temporal Metadata Field *
-		 */
-		metadataMap.put("temporal","temporal");
-		metadataMap.put("calendarDate","temporal");
-		metadataMap.put("endDate","temporal");
-		metadataMap.put("beginDate","temporal");
+		configFile = new File("configFiles.xml");
+		configParser = new DataOneXMLParser();
 		
-		metadataFields.add("title");
-		metadataFields.add("abstract");
-		metadataFields.add("keyword");
-		metadataFields.add("keywordSet");
+	}
 
-		/*
-		 * Spatial MEtadata Field *
-		 */
-		metadataFields.add("spatial");
-		metadataFields.add("southBoundingCoordinate");
-		metadataFields.add("northBoundingCoordinate");
-		metadataFields.add("eastBoundingCoordinate");
-
-		/*
-		 * Temporal Metadata Field *
-		 */
-		metadataFields.add("temporal");
-		metadataFields.add("calendarDate");
-		metadataFields.add("endDate");
-		metadataFields.add("beginDate");
-		
-		metadataFields.add("address");
+	public String getXpath(String fileType) throws SAXException, IOException, ParserConfigurationException {
+		String xPath="" ; 
+		if ( fileType.contains("eml-2.1.1")) {
+			 xPath = "//FileFormats/FileFormat[@name='eml']/*";
+		}
+		else if ( fileType.contains("onedcx")){
+			 xPath = "//FileFormats/FileFormat[@name='onedcx']/*";
+		}
+		else {
+			 xPath ="Default"; 
+		}
+		return xPath;
 	}
 	
-	public Integer getFileTypeNum(String fileType) {
-		if(fileType.contains("ecoinformatics.org")) {
-			//System.out.println("text/xml; eml://ecoinformatics.org/eml-2.1.1");
-			fileTypeNum =  1; 
-		}
-		else if(fileType.contains("onedcx")){
-			//System.out.println("text/xml; http://ns.dataone.org/metadata/schema/onedcx/v1.0");
-			fileTypeNum =  2; 
-		}
+	public Object[] getMetadataList(String xPath) throws SAXException, IOException, ParserConfigurationException {
 		
-		return fileTypeNum;
+		List<String>  dataField = new ArrayList<String>();
+		List<String>  dataValue = new ArrayList<String>();
+		
+		if (xPath.contains("//")){
+			//System.out.println(field);
+			Object[] metaDataObj = configParser.getXpathData(configFile, xPath);
+		
+			dataField.addAll((Collection<? extends String>) metaDataObj[0]);
+			dataValue.addAll((Collection<? extends String>) metaDataObj[1]);
+		}
+		else 
+		{
+			//System.out.println(field);
+			Object[] metaDataObj =configParser.getMetadata(configFile,xPath);
+		}
+		return new Object[] {dataField, dataValue};
 	}
 	
-	public List<String> getFieldList(int fileTypeNum){
+	public List<String> getTikaParser(File file) throws SAXException, IOException, ParserConfigurationException, TikaException {
 		
-		switch(fileTypeNum) {
-		   case 1 :
-			   emlMetadata eml = new emlMetadata();
-		      return eml.metadataFields; 
-		   case 2 :
-			  onedcxMetadata onedcx = new onedcxMetadata();
-		      return onedcx.metadataFields; 
-		   default : // Optional
-			   return defaultField;
+      //Parser method parameters
+      Parser parser = new AutoDetectParser();
+      //Parser parser = new dataone_onedcx();
+      BodyContentHandler handler = new BodyContentHandler();
+      
+      Metadata metadata = new Metadata();
+      FileInputStream inputstream = new FileInputStream(file);
+      ParseContext context = new ParseContext();
+      
+      parser.parse(inputstream, handler, metadata, context);
+
+      List<String> metaData = new ArrayList(); 
+      for(String name : metadata.names()) {		        
+         metaData.add(name + ": " + metadata.get(name));
+         
+      }
+      return metaData;
+	}
+	
+	public  Object[]  getMetaDataVal(File file, List<String> metaDataFields) throws SAXException, IOException, ParserConfigurationException {
+		DataOneXMLParser contentParser = new DataOneXMLParser();
+
+		List<String>  dataField = new ArrayList<String>();
+		List<String>  dataValue = new ArrayList<String>();
+		
+		
+		for (int index =1 ; index < metaDataFields.size(); index++) {
+			String field = metaDataFields.get(index).trim();
+			
+			if (field.contains("//")){
+				//System.out.println(field);
+				Object[] metaDataObj = contentParser.getXpathData(file,field);
+				dataField.addAll((Collection<? extends String>) metaDataObj[0]);
+				dataValue.addAll((Collection<? extends String>) metaDataObj[1]);
+			}
+			else 
+			{
+				//System.out.println(field);
+				Object[] metaDataObj =contentParser.getMetadata(file,field);
+			}
+			
 		}
 		
+		return new Object[] {dataField, dataValue};
 	}
 }
