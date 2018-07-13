@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileFormats>
+  <FileFormat name="eml" version="eml-2.1.1">
+      <metadataFile>
+        ../../file_identification/examples/eml-211/00_eml-211.xml
+      </metadataFile>
+      <metadataFields>
+        <field>
+          title
+        </field>
+        <field>
+          //dataset/creator/*
+        </field>
+        <field>
+          //dataset/creator/*
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="onedcx" version="v1.0" >
+      <metadataFile>
+        ../../file_identification/examples/onedcx/00_onedcx.xml
+      </metadataFile>
+      <namespaces>
+        <namespace prefix="dc">
+          http://purl.org/dc/terms/
+        </namespace>
+        <namespace prefix="dcterms">
+          http://purl.org/dc/terms/
+        </namespace>
+      </namespaces>
+      <metadataFields>
+        <field>
+          dc:title
+        </field>
+        <field>
+        //metadata/simpleDc/*
+        </field>
+        <field>
+        //metadata/dcTerms/*
+        </field>
+
+      </metadataFields>
+  </FileFormat>
+</FileFormats>
