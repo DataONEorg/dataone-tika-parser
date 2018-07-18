@@ -129,29 +129,3 @@ public class DataOneMetaDataParser {
 	   }
  }
 }
-
-
-/*
-		    //parserDom.xmlMetadata(file, mapper.metadataMap());
-		    XpathForMetadata xPathQuery = new XpathForMetadata();
-		   
-//		  for (String path : xPathQuery.getXpath(mapper.getFileTypeNum(filetype))) {
-//				//System.out.println(path);
-//				List<NodeList> xmlMetadata = parserDom.getNodesValues(file,path);
-//				//main.printNodeValue(xmlMetadata);
-//			}	
- * 
- * 
- *     public void printNodeValue(List<NodeList> xmlMetadata) {
-    	
-		  for (int i = 0; i < xmlMetadata.get(0).getLength(); i++) 
-		  	{
-			  String nodeValue = xmlMetadata.get(1).item(i).getNodeValue();
-			  String nodeName  = xmlMetadata.get(0).item(i).getNodeName();
-			  	System.out.println(nodeName + ": " + nodeValue);
-			  if(!nodeValue.contains("\n")) {
-				  //System.out.println(nodeName + ": " + nodeValue);
-				  } 
-		  	}
-    }
- */

@@ -164,12 +164,6 @@ public Object[] getXpathData(File file, String path) throws SAXException, IOExce
 
 		Object elements = expr.evaluate(document, XPathConstants.NODESET);
 		
-//		domFactory.setNamespaceAware(true);
-//		DocumentBuilderFactory docbuildFactory = DocumentBuilderFactory.newInstance();
-//		DocumentBuilder docBuilder = docbuildFactory.newDocumentBuilder();
-//		Document document = docBuilder.parse(file);
-//		rootNode = document.getDocumentElement().getNodeName();
-//		Object elements = expr_node.evaluate(document, XPathConstants.NODESET);
 		rootNode = document.getDocumentElement().getNodeName();
 		
 		List<String>  dataField = new ArrayList<String>();
