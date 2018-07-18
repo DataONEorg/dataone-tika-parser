@@ -2,6 +2,7 @@ package org.dataone.parser;
 
 
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.tika.Tika;
 import org.apache.tika.exception.TikaException;
@@ -18,7 +19,7 @@ public class DataOneMetaDataParser {
 	public static List<String> metaDataValues; 
 
 	
-    public static void main(String args[]) throws SAXException, IOException, ParserConfigurationException, TikaException {
+    public static void main(String args[]) throws SAXException, IOException, ParserConfigurationException, TikaException, XPathExpressionException {
     	
     	// Variable for storing the file type. 
   	  	String fileType = "";
@@ -37,6 +38,7 @@ public class DataOneMetaDataParser {
   	  	//detecting the file type using detect method
   	  	try {
   	  		fileType = tika.detect(inpFile);
+  	  		fileType = fileType.replaceAll("\\\\", "");
   	  		
   	  		// get the xPath for the meta data fields for the file type. 
   	  		String xPath =  mapper.getXpath(fileType);
@@ -58,34 +60,41 @@ public class DataOneMetaDataParser {
   	  		 * */
   	  			
   	  		Object[] configData = mapper.getMetadataList(xPath); 
- 		    //Object[] obj =  mapper.getMetaDataVal(inpFile, metaDataFields); 
- 		    //metaDataFields = (List<String>) configData[0];
+ 		    metaDataFields = (List<String>) configData[0];
  		    metaDataValues = (List<String>) configData[1];
-
-// 		    for (int index =0 ; index < metaDataFields.size(); index ++) {
-// 			  // parserDom.getMetadata(file,field) ;
-// 		    	String field = metaDataFields.get(index); 
-// 		    	 
-// 		    	String value = metaDataValues.get(index);
-// 		    	//System.out.println(field + ": " + value.trim());
-// 		   }
  		    
+ 		   //mapper.getNamespace(metaDataFields,metaDataValues);
+ 		    
+ 		    for (int index =0 ; index < metaDataFields.size(); index ++) {
+ 	 		    
+ 	 		    
+ 			  // parserDom.getMetadata(file,field) ;
+ 		    	String field = metaDataFields.get(index); 
+ 		    	 
+ 		    	String value = metaDataValues.get(index);
+ 		    	//System.out.println(field + ": " + value.trim());
+ 		   }
+ 		    
+ 		   System.out.println("-----------------------------------------------------------------------------");
+ 		   System.out.printf("%10s", "FILE FORMAT :" + fileType);
+ 		   System.out.println();
+ 		   System.out.println("-----------------------------------------------------------------------------");
+ 		   
   	  		/* 
   	  		 *  Get the values for the metadata fields from the input file 
   	  		 *  
   	  		 * */
  		    
   	  		Object[] data = mapper.getMetaDataVal(inpFile, metaDataValues); 
- 		    //Object[] obj =  mapper.getMetaDataVal(inpFile, metaDataFields); 
+// 		    //Object[] obj =  mapper.getMetaDataVal(inpFile, metaDataFields); 
   	  		List<String>  dataFields = (List<String>) data[0];
   	  		List<String>  dataValues = (List<String>) data[1];
 
  		    for (int index =0 ; index < dataFields.size(); index ++) {
  			  // parserDom.getMetadata(file,field) ;
  		    	String field = dataFields.get(index); 
- 		    	 
  		    	String value = dataValues.get(index);
- 		    	System.out.println(field + ": " + value.trim());
+		    	System.out.println(field + ": " + value.trim());
  		   }
  		   
   	  		}

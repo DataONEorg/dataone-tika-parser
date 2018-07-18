@@ -25,23 +25,25 @@ public class NameSpaceExample {
 	XPath xpath = factory.newXPath();
 	//Map<String, String> prefMap = new HashMap<String, String>();
 	 Map<String, String> prefMap = new HashMap<String, String>(){{
-	    //put("dc", "http://purl.org/dc/terms/");
-	    //put("dcterms", "http://purl.org/dc/terms/");
-	   // put("ns", "http://ns.dataone.org/metadata/schema/onedcx/v1.0");
-	    put("eml", "eml://ecoinformatics.org/eml-2.1.1");
+	      put("dc", "http://purl.org/dc/terms/");
+	      put("dcterms", "http://purl.org/dc/terms/");
+	      put("ns", "http://ns.dataone.org/metadata/schema/onedcx/v1.0");
+	       //put("eml", "eml://ecoinformatics.org/eml-2.1.1");
 	}};
 	
 	SimpleContext namespaces = new SimpleContext(prefMap);
 	//SimpleContext namespaces = new SimpleContext(prefMap);
 	xpath.setNamespaceContext(namespaces);
-	XPathExpression expr = xpath.compile("//dataset/creator"); //ns:metadata/ns:simpleDc/dc:format
+	  System.out.println(prefMap);
+
+	XPathExpression expr = xpath.compile("//ns:metadata/ns:simpleDc/dc:format"); //ns:metadata/ns:simpleDc/dc:format
 	DocumentBuilderFactory docbuildFactory = DocumentBuilderFactory.newInstance();
 	docbuildFactory.setNamespaceAware(true);
 	
 	DocumentBuilder docBuilder = docbuildFactory.newDocumentBuilder();
 	
-	//File file = new File(args[0]);
-	File file = new File("../../file_identification/examples/eml-211/00_eml-211.xml");
+	File file = new File(args[0]);
+	//File file = new File("../../file_identification/examples/eml-211/00_eml-211.xml");
 	
 	Document document = docBuilder.parse(file);
 	

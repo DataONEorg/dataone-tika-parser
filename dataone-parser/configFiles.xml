@@ -1,44 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <FileFormats>
-  <FileFormat name="eml" version="eml-2.1.1">
-      <metadataFile>
-        ../../file_identification/examples/eml-211/00_eml-211.xml
-      </metadataFile>
+  <FileFormat name="eml-211">
+      <metadataFields>
+      <field>
+          //dataset/abstract
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="eml-210">
       <metadataFields>
         <field>
-          title
+          //dataset/title
         </field>
         <field>
-          //dataset/creator/*
+          //dataset/abstract
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="eml-201">
+      <metadataFields>
+        <field>
+          permission
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="eml-200">
+      <metadataFields>
+        <field>
+          permission
         </field>
         <field>
-          //dataset/creator/*
+          //dataset/abstract
         </field>
       </metadataFields>
   </FileFormat>
   <FileFormat name="onedcx" version="v1.0" >
-      <metadataFile>
-        ../../file_identification/examples/onedcx/00_onedcx.xml
-      </metadataFile>
       <namespaces>
-        <namespace prefix="dc">
-          http://purl.org/dc/terms/
-        </namespace>
-        <namespace prefix="dcterms">
-          http://purl.org/dc/terms/
-        </namespace>
+        <namespace prefix="dc" uri="http://purl.org/dc/terms/" />
+        <namespace prefix="dcterms" uri="http://purl.org/dc/terms/" />
+        <namespace prefix="ns" uri="http://ns.dataone.org/metadata/schema/onedcx/v1.0" />
       </namespaces>
       <metadataFields>
         <field>
           dc:title
         </field>
         <field>
-        //metadata/simpleDc/*
+        //ns:metadata/ns:simpleDc/dc:format
         </field>
         <field>
-        //metadata/dcTerms/*
+        //ns:metadata/ns:dcTerms/dcterms:spatial
         </field>
-
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="isotc211">
+      <namespaces>
+        <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco" />
+        <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
+        <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
+      </namespaces>
+      <metadataFields>
+        <field>
+          //gmi:MI_Metadata/gmd:contact
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="isotc211-gmd-noaa">
+      <namespaces>
+        <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco" />
+        <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
+        <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
+      </namespaces>
+      <metadataFields>
+        <field>
+          //gmi:MI_Metadata/gmd:contact
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="isotc211-gmd-pangaea">
+      <namespaces>
+        <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco" />
+        <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
+        <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
+      </namespaces>
+      <metadataFields>
+        <field>
+          //gmi:MI_Metadata/gmd:contact
+        </field>
       </metadataFields>
   </FileFormat>
 </FileFormats>
