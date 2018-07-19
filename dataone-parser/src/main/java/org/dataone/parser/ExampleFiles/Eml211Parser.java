@@ -16,9 +16,6 @@ package org.dataone.parser.ExampleFiles;
  * limitations under the License.
  */
 
-import org.dataone.metadata.Eml211;
-import org.dataone.metadata.Onedcx;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collections;

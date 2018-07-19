@@ -1,0 +1,54 @@
+﻿Title,//dc:title,        <field label=,">
+          ","
+        </field>",,
+Creator,//dc:creator,"        <field label=""",""">
+          ","
+        </field>",,
+Subject,//dc:subject,"        <field label=""",""">
+          ","
+        </field>",,
+Description,//dc:description,"        <field label=""",""">
+          ","
+        </field>",,
+Description,//dcterms:abstract,"        <field label=""",""">
+          ","
+        </field>",,
+Publisher,//dc:publisher,"        <field label=""",""">
+          ","
+        </field>",,
+Contributor,//dc:contributor,"        <field label=""",""">
+          ","
+        </field>",,
+Date,//dc:date,"        <field label=""",""">
+          ","
+        </field>",,
+Type,//dc:type,"        <field label=""",""">
+          ","
+        </field>",,
+Format,//dc:format,"        <field label=""",""">
+          ","
+        </field>",,
+Identifier,//dc:identifier,"        <field label=""",""">
+          ","
+        </field>",,
+Source,//dc:source,"        <field label=""",""">
+          ","
+        </field>",,
+Relation,//dc:relation,"        <field label=""",""">
+          ","
+        </field>",,
+Coverage,//dc:coverage,"        <field label=""",""">
+          ","
+        </field>",,
+Coverage,//dcterms:spatial,"        <field label=""",""">
+          ","
+        </field>",,
+Coverage,//dcterms:temporal,"        <field label=""",""">
+          ","
+        </field>",,
+Rights,//dc:rights,"        <field label=""",""">
+          ","
+        </field>",,
+Rights,//dcterms:accessRights,"        <field label=""",""">
+          ","
+        </field>",,

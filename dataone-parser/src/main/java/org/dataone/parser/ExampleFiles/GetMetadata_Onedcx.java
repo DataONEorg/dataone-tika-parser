@@ -10,7 +10,6 @@ import org.apache.tika.metadata.Metadata;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
-import org.dataone.parser.OnedcxParser;
 import org.xml.sax.SAXException;
 import java.util.List;
 

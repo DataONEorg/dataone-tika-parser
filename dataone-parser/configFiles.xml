@@ -2,17 +2,17 @@
 <FileFormats>
   <FileFormat name="eml-211">
       <metadataFields>
-      <field>
-          //dataset/abstract
-        </field>
-      </metadataFields>
+      <field label="Title">
+        //dc:title
+      </field>
+    </metadataFields>
   </FileFormat>
   <FileFormat name="eml-210">
       <metadataFields>
-        <field>
+        <field label="title">
           //dataset/title
         </field>
-        <field>
+        <field label="abstract">
           //dataset/abstract
         </field>
       </metadataFields>
@@ -41,26 +41,59 @@
         <namespace prefix="ns" uri="http://ns.dataone.org/metadata/schema/onedcx/v1.0" />
       </namespaces>
       <metadataFields>
-        <field>
-          dc:title
+        <field label="Title">
+          //dc:title
         </field>
-        <field>
-        //ns:metadata/ns:simpleDc/dc:format
+        <field label="Creator">
+          //dc:creator
         </field>
-        <field>
-        //ns:metadata/ns:dcTerms/dcterms:spatial
+        <field label="Subject">
+          //dc:subject
         </field>
-      </metadataFields>
-  </FileFormat>
-  <FileFormat name="isotc211">
-      <namespaces>
-        <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco" />
-        <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
-        <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
-      </namespaces>
-      <metadataFields>
-        <field>
-          //gmi:MI_Metadata/gmd:contact
+        <field label="Description">
+          //dc:description
+        </field>
+        <field label="Description">
+          //dcterms:abstract
+        </field>
+        <field label="Publisher">
+          //dc:publisher
+        </field>
+        <field label="Contributor">
+          //dc:contributor
+        </field>
+        <field label="Date">
+          //dc:date
+        </field>
+        <field label="Type">
+          //dc:type
+        </field>
+        <field label="Format">
+          //dc:format
+        </field>
+        <field label="Identifier">
+          //dc:identifier
+        </field>
+        <field label="Source">
+          //dc:source
+        </field>
+        <field label="Relation">
+          //dc:relation
+        </field>
+        <field label="Coverage">
+          //dc:coverage
+        </field>
+        <field label="Coverage">
+          //dcterms:spatial
+        </field>
+        <field label="Coverage">
+          //dcterms:temporal
+        </field>
+        <field label="Rights">
+          //dc:rights
+        </field>
+        <field label="Rights">
+          //dcterms:accessRights
         </field>
       </metadataFields>
   </FileFormat>
@@ -85,6 +118,19 @@
       <metadataFields>
         <field>
           //gmi:MI_Metadata/gmd:contact
+        </field>
+      </metadataFields>
+  </FileFormat>
+  <FileFormat name="isotc211">
+      <namespaces>
+        <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco" />
+        <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
+        <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
+      </namespaces>
+      <metadataFields>
+        <field label="contact">
+          //gmi:MI_Metadata/gmd:contact
+          <!--   output   Axiom Data Science : Metadata Specialist -->
         </field>
       </metadataFields>
   </FileFormat>
