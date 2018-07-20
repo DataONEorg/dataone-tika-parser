@@ -2,9 +2,45 @@
 <FileFormats>
   <FileFormat name="eml-211">
       <metadataFields>
-      <field label="Title">
-        //dc:title
-      </field>
+        <field label="Title">
+          //dataset/title
+        </field>
+        <field label="Creator">
+          //dataset/creator/organizationName
+        </field>
+        <field label="Creator">
+          //dataset/creator/individualName
+        </field>
+        <field label="Subject">
+          //dataset/keywordset/keyword
+        </field>
+        <field label="Description">
+          //dataset/abstract
+        </field>
+        <field label="Publisher">
+          //dataset/publisher/oganizationName
+        </field>
+        <field label="Publisher">
+          //dataset/publisher/individualName
+        </field>
+        <field label="Contributor">
+          //dataset/associatedParty/organizationName
+        </field>
+        <field label="Contributor">
+          //dataset/associatedParty/individualName
+        </field>
+        <field label="Date">
+          //dataset/pubDate
+        </field>
+        <field label="Coverage">
+          //dataset/coverage/geographicCoverage
+        </field>
+        <field label="Coverage">
+          //dataset/coverage/temporalCoverage
+        </field>
+        <field label="Rights">
+          //dataset/intellectualRights
+        </field>
     </metadataFields>
   </FileFormat>
   <FileFormat name="eml-210">
@@ -128,10 +164,39 @@
         <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
       </namespaces>
       <metadataFields>
-        <field label="contact">
-          //gmi:MI_Metadata/gmd:contact
-          <!--   output   Axiom Data Science : Metadata Specialist -->
+        <field label="Title">
+          //gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title
         </field>
+        <field label="Creator">
+          //gmd:CI_ResponsibleParty[contains(gmd:role/gmd:CI_RoleCode, 'principalInvestigator') or contains(gmd:role/gmd:CI_RoleCode,'author')]/gmd:individualName
+        </field>
+        <field label="Subject">
+          //gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:keyword
+        </field>
+        <field label="Description">
+          //gmd:MD_DataIdentification/gmd:abstract
+        </field>
+        <field label="Publisher">
+          //gmd:CI_ResponsibleParty[contains(gmd:role/gmd:CI_RoleCode, 'distributor')]/gmd:individualName
+        </field>
+        <field label="Publisher">
+          //gmd:CI_ResponsibleParty[contains(gmd:role/gmd:CI_RoleCode, 'distributor')]/gmd:organisationName
+        </field>
+        <field label="Date">
+          //gmd:CI_Citation/gmd:date/gmd:CI_Date[contains(gmd:dateType/gmd:CI_DateTypeCode, 'publication')]/gmd:date
+        </field>
+        <field label="Identifier">
+          //gmd:CI_Citation/gmd:identifier
+        </field>
+        <field label="Coverage">
+          //gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox
+        </field>
+        <field label="Coverage">
+          //gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingPolygon
+        </field>
+        <field label="Coverage">
+          //gmd:extent/gmd:EX_Extent/gmd:temporalElement/gmd:EX_TemporalExtent
+        </field>               
       </metadataFields>
   </FileFormat>
 </FileFormats>

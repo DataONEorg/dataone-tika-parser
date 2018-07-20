@@ -125,9 +125,9 @@ public class DataOneMetaDataParser {
  			  // parserDom.getMetadata(file,field) ;
  		    	String field = dataFields.get(index); 
  		    	String value = dataValues.get(index);
- 		    	System.out.println(field + ": " + value.trim());
+ 		    	//System.out.println(field + ": " + value.trim());
  		    	if(value.length()>0) {
- 		    		//System.out.println(field + ": " + value.trim());
+ 		    		System.out.println(field + ": " + value.trim());
  		    	}
  		    	
  		   }
