@@ -37,9 +37,13 @@ public class DataOneMetaDataParser {
 	public static List<String> metaDataValues; 
 
 	/**
-	   * This method is used to detect the filetype and print metadata contents. 
+	   * The main method is used to detect the filetype and print metadata contents. 
 	   * @param args[0] This is takes the filename as the input. 
 	   * @exception IOException On input error.
+	   * @throws SAXException On incorrect XML file.
+	   * @throws ParserConfigurationException On parsing configuration. 
+	   * @throws TikaException On Tika exception.
+	   * @throws XPathExpressionException on invalid Xpath Expression.
 	   * @see IOException
 	   */
 	

@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"org.dataone.metadata"},{"l":"org.dataone.parser"},{"l":"org.dataone.parser.ExampleFiles"}]
+packageSearchIndex = [{"l":"org.dataone.metadata"}]

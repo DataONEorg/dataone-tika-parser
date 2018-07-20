@@ -46,7 +46,7 @@ public class DataOneMapper
 	   * One is for the configFiles.xml and the other for the input file. 
 	   */
 	public DataOneMapper() {
-		configFile = new File("configFiles.xml");
+		configFile = new File("configFile.xml");
 		configParser = new DataOneXMLParser();
 		
 	}
@@ -153,6 +153,7 @@ public class DataOneMapper
 	   */
 	
 	
+@SuppressWarnings("unchecked")
 public  Object[]  getMetaDataVal(File file, List<String> metaDataFields) throws SAXException, IOException, ParserConfigurationException, XPathExpressionException {
 
 		List<String>  dataField = new ArrayList<String>();
@@ -175,14 +176,33 @@ public  Object[]  getMetaDataVal(File file, List<String> metaDataFields) throws 
 			if (fieldName !=null) {
 				//System.out.println(fieldName);
 				dataField.add(fieldName);	
-				dataValue.add(String.join( ": ",(Collection<? extends String>) metaDataObj[1]).trim());
+				
+				//dataValue.add(String.join( ": ",(Collection<? extends String>) metaDataObj[1]).trim());
+				dataValue.add(concatVal((Collection<? extends String>) metaDataObj[1]));
 			}
-			 	
-			
 		}
 		return new Object[] {dataField, dataValue};
 	}
 
+protected String concatVal(Collection<? extends String> metaDataObj) {
+	String result ="";
+	for (String value: metaDataObj) {
+	
+	String	text = value.replace(System.getProperty("line.separator"), "").trim();
+		if (!text.equals("")) {
+			
+			result = result.trim() + "; " +text.trim()  ; 
+		}
+		else {
+			//System.out.println("PRATIK" + text);
+		}
+	}
+	if (result.length() > 0 ){
+		result = result.substring(1);
+	}
+	
+	return result;
+}
 
 	
 	// Get the hash map of the prefix and namespace uri. 
