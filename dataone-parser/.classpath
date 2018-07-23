@@ -14,7 +14,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
 		<attributes>
-			<attribute name="module" value="true"/>
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
@@ -24,87 +23,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/dataone-tika-parser/dataone-parser/tika-app-1.18.jar"/>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/tika/tika-parsers/1.18/tika-parsers-1.18.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.tika"/>
-			<attribute name="maven.artifactId" value="tika-parsers"/>
-			<attribute name="maven.version" value="1.18"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/tika/tika-core/1.18/tika-core-1.18.jar" sourcepath="/Users/pratikshrivastava/.m2/repository/org/apache/tika/tika-core/1.18/tika-core-1.18-sources.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.tika"/>
-			<attribute name="maven.artifactId" value="tika-core"/>
-			<attribute name="maven.version" value="1.18"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="lib" path="tika-app-1.18.jar"/>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/com/google/guava/guava/17.0/guava-17.0.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="com.google.guava"/>
-			<attribute name="maven.artifactId" value="guava"/>
-			<attribute name="maven.version" value="17.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/uima/uimaj-core/2.9.0/uimaj-core-2.9.0.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.uima"/>
-			<attribute name="maven.artifactId" value="uimaj-core"/>
-			<attribute name="maven.version" value="2.9.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/james/apache-mime4j-dom/0.8.1/apache-mime4j-dom-0.8.1.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.james"/>
-			<attribute name="maven.artifactId" value="apache-mime4j-dom"/>
-			<attribute name="maven.version" value="0.8.1"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/bouncycastle/bcprov-jdk15on/1.54/bcprov-jdk15on-1.54.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.bouncycastle"/>
-			<attribute name="maven.artifactId" value="bcprov-jdk15on"/>
-			<attribute name="maven.version" value="1.54"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/sis/core/sis-utility/0.8/sis-utility-0.8.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.sis.core"/>
-			<attribute name="maven.artifactId" value="sis-utility"/>
-			<attribute name="maven.version" value="0.8"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/apache/xmlbeans/xmlbeans/2.6.0/xmlbeans-2.6.0.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.apache.xmlbeans"/>
-			<attribute name="maven.artifactId" value="xmlbeans"/>
-			<attribute name="maven.version" value="2.6.0"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="/Users/pratikshrivastava/.m2/repository/org/springframework/spring-core/3.2.16.RELEASE/spring-core-3.2.16.RELEASE.jar">
-		<attributes>
-			<attribute name="maven.pomderived" value="true"/>
-			<attribute name="maven.groupId" value="org.springframework"/>
-			<attribute name="maven.artifactId" value="spring-core"/>
-			<attribute name="maven.version" value="3.2.16.RELEASE"/>
-			<attribute name="maven.scope" value="compile"/>
-		</attributes>
-	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
