@@ -7,9 +7,9 @@
 * [Using DataONE MetaDataParser](#using-dataone-metadataparser)
   * [Steps for using the application](#steps-for-using-the-application)
   * [Adding New File Format](#adding-new-file-format)
-    * [Update custom-mimetypes.xml file](#update-custom-mimetypes.xml-file) 
-    * [Add Entries in config.Properties file](#add-entries-in-config.Properties-file)
-    * [Update conFig.xml file](#update-config.xml-file)
+    * [Add entry in custom mimetypes ](#add-entry-in-custom-mimetypes-file)
+    * [Add entry in property file](#add-entry-in-property-file)
+    * [Add entry in  configuration file](#add-entry-in-configuration-file)
 
 * [References](#References)
 
@@ -66,10 +66,11 @@ Rights: The USA-NPN National Coordinating Office (nco@usanpn.org), referred to a
 ```
 ### Adding New File Format
 The application performs two steps, first identifying the file format and second extraction of the metadata. It uses Tika tool kit ability for detecting the file types using a custom-mimetypes.xml file which can be used for adding new file formats for identification. For the second step, it uses the conFig.xml file for extracting the standard metadata fields for the new file formats defined in it. And to extract, the metadata properties, it needs the correct XPath values, which are defined in the `config.Properties` file. Hence, the below two steps are needed for successfully adding the new file type and extracting the metadata fields of interest.
-#### Update custom-mimetypes.xml file
+
+#### Add entry in custom mimetypes
 For updating the custom-mimetypes.xml file refer to the [readme](https://github.com/DataONEorg/file_identification/tree/master/Apache_tika#creation-of-custom-mimetypes).
 
-#### Add Entries in config.Properties file
+#### Add entry in property file
 In the `config.Properties` file add the new formatId as the key and the XPath as the value for retrieving the metadata fields from the `configFile.xml `
 ```
 ## XPath for the FGDC
@@ -79,7 +80,7 @@ FGDC-STD-001-1998=//FileFormats/FileFormat[@name='fgdc-001-1998']/*
 http\://www.isotc211.org/2005/gmd=//FileFormats/FileFormat[@name='isotc211']/*
 ```
 
-#### Update conFig.xml file
+#### Add entry in  configuration file
 Once, the new file is detected we need to create an entry for it in the conFig.xml file as below:
 If the new file format uses the prefix with the namespace, than we need to add the   `<namespace> ` tags with "prefix" and "uri" attributes or else it can be ignored.
 
@@ -102,7 +103,6 @@ The field tags uses the `label` attribute for replacing the Xpath expression wit
     </metadataFields>
 </FileFormat>
 ```
-
 
 
 ## References:
