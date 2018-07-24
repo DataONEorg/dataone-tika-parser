@@ -7,8 +7,9 @@
 * [Using DataONE MetaDataParser](#using-dataone-metadataparser)
   * [Steps for using the application](#steps-for-using-the-application)
   * [Adding New File Format](#adding-new-file-format)
-    * Update custom-mimetypes.xml() file
-    * Update conFig.xml() file
+    * [Update custom-mimetypes.xml file](#update-custom-mimetypes.xml-file) 
+    * [Add Entries in config.Properties file](#add-entries-in-config.Properties-file)
+    * [Update conFig.xml file](#update-config.xml-file)
 
 * [References](#References)
 
@@ -68,7 +69,7 @@ The application performs two steps, first identifying the file format and second
 #### Update custom-mimetypes.xml file
 For updating the custom-mimetypes.xml file refer to the [readme](https://github.com/DataONEorg/file_identification/tree/master/Apache_tika#creation-of-custom-mimetypes).
 
-#### Add Entries in cofig.Properties file
+#### Add Entries in config.Properties file
 In the `config.Properties` file add the new formatId as the key and the XPath as the value for retrieving the metadata fields from the `configFile.xml `
 ```
 ## XPath for the FGDC
