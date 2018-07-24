@@ -7,6 +7,8 @@
 * [Using DataONE MetaDataParser](#using-dataone-metadataparser)
   * [Steps for using the application](#steps-for-using-the-application)
   * [Adding New File Format](#adding-new-file-format)
+    * Update custom-mimetypes.xml() file
+    * Update conFig.xml() file
 
 * [References](#References)
 
@@ -37,10 +39,10 @@
 Apache Tika toolkit provides the functionality for detecting the mimetypes of a file. This readme describes how to enable Tika for detecting new mimetypes by creating an xml file. Its ability to detect and parse file formats from over a 1000 different formats makes it a useful tool for search engine indexing, content analysis, translation etc.
 
 
-### Using DataONE MetaDataParser:
+## Using DataONE MetaDataParser:
 The DataONEm Metadata Parser is a command line application, for extracting the standard metadata fields specified in the configuration file based on the file type detected. The application uses Apache Tika toolkit for file type detection and parsing. The application has an XML parser class for reading the config.xml file and extracts the metadata fields of interest for the file type detected. It uses these fields for parsing the input file and displays the result on the command line.
 
-#### Steps for using the application
+### Steps for using the application
 The latest jar files for the application are stored in the [jar]() folder. Use the below command for executing the application by specifying the input file name.
 ```
 $ java -classpath tika-app-1.18.jar:dataoneMetadataParser_v1.0.jar:custom-mimetypes.jar org.dataone.parser.DataOneMetaDataParser ../../file_identification/examples/eml-211/00_eml-211.xml
@@ -61,81 +63,35 @@ Coverage: 2008
 Rights: The USA-NPN National Coordinating Office (nco@usanpn.org), referred to as the “USA-NPN,” as operator of the USA-NPN Website, requires all users, referred to as “Users,” who have access to USA-NPN data via the Website to abide by the following terms of this USA-NPN Data Use Policy. 1. Data accessible via the USA-NPN National Phenology Database and Site are openly and universally available to all users. 2. The USA-NPN is not responsible for data content or the use of the data. 3. Neither the USA-NPN nor its employees or contractors is liable or responsible for the content of data, or for any loss, damage, claim, cost, or expense, however it may arise, from an inability to use the USA-NPN National Phenology Database and Site. 4. The USA-NPN disclaims all liability for and makes no warranties, expressed or implied, with respect to these products and their manufacturers, including without limitation, any implied warranties or merchantability or fitness for a particular purpose. 5. While substantial efforts are made to ensure the accuracy of USA-NPN data and documentation contained in a data set, complete accuracy of data and metadata cannot be guaranteed. All USA-NPN data and metadata are made available “as is.” Users of USA-NPN data hold all parties involved in the production and distribution of a data set harmless for damages resulting from its use or interpretation.  Disclaimer: While substantial efforts are made to ensure the accuracy of USA-NPN data and documentation contained in a data set, complete accuracy of data and metadata cannot be guaranteed. All USA-NPN data and metadata are made available "as is." Users of USA-NPN data hold all parties involved in the production and distribution of a data set harmless for damages resulting from its use or interpretation.
 
 ```
-## Installing and Using dataone magic file:
+### Adding New File Format
+The application performs two steps, first identifying the file format and second extraction of the metadata. It uses Tika tool kit ability for detecting the file types using a custom-mimetypes.xml file which can be used for adding new file formats for identifiation. For the second step, it uses the conFig.xml file for extracting the standard metadata fields for the new file formats defined in it. Hence, the below two steps are needed for successfully adding the new file type and extracting the metadata fields of interest.
+#### Update custom-mimetypes.xml file
+For updating the custom-mimetypes.xml file refer to the [readme]https://github.com/DataONEorg/file_identification/tree/master/Apache_tika#creation-of-custom-mimetypes.
 
-### On Linux:
-The file 3.4 version and above will contain the latest changes but for using the dataone magic file with earlier versions on Linux system, kindly follow the below steps:
+#### Update conFig.xml file
+Once, the new file is detected we need to create an entry for it in the conFig.xml file as below:
+If the new file format uses the prefix with the namespace, than we need to add the   `<namespace> ` tags with "prefix" and "uri" attributes or else it can be ignored.
 
-1. Clone the [file](https://github.com/file/file) github repository.
-2. Remove the earlier magic files from the system using below command
-  `sudo apt-get purge libmagic1 file`
-3. Follow the below steps for compiling and installing the new magic files.
-  * autoconf
-  * ./configure make
-  * make check -no errors
-  * make install
-  * make installcheck - no errors
+The field tags uses the `label` attribute for replacing the Xpath expression with common label across the different file formats. 
 
-### On Mac:
-
-On Mac, the replacing and compiling of the libmagic file may be tedious. Hence, you may use the below hack for using the dataone magic file on Mac with earlier version of file.
-1. Copy the compiled [magic.mgc](https://github.com/DataONEorg/file_identification/blob/master/magic_files/magic.mgc) file to local system.
-2. Create an alias as below or use "-m" option.
-  ```
-   alias blah="file -m magic_files/magic.mgc"
-   blah examples/eml-200/*
-   examples/eml-200/00_eml-200.xml: eml://ecoinformatics.org/eml-2.0.0
-  examples/eml-200/01_eml-200.xml: eml://ecoinformatics.org/eml-2.0.0
-  examples/eml-200/03_eml-200.xml: eml://ecoinformatics.org/eml-2.0.0
-  ```
-
-  ```
-  $ file -m magic_files/magic.mgc examples/eml-200/*
-    examples/eml-200/00_eml-200.xml: eml://ecoinformatics.org/eml-2.0.0
-    examples/eml-200/01_eml-200.xml: eml://ecoinformatics.org/eml-2.0.0
-    examples/eml-200/02_eml-200.xml: eml://ecoinformatics.org/eml-2.0.0
-  ```
-
-## Python Unittest:
-A unittest is also developed for testing the custom magic file for identifying the correct file types from the examples provided.
-This test can be executed after cloning the repository and installing the `filemagic` using the below command.
-
-The output of the unittest is as below. The test will fail for FGDC-STD-001-1999 as we are still working on that file format.
 ```
-$ pip install filemagic
-
-$ python -m unittest discover -v
-
-test_dryad (test.test_fileExt.TestFileExt) ... ok
-test_eml_200 (test.test_fileExt.TestFileExt) ... ok
-test_eml_201 (test.test_fileExt.TestFileExt) ... ok
-test_eml_210 (test.test_fileExt.TestFileExt) ... ok
-test_eml_211 (test.test_fileExt.TestFileExt) ... ok
-test_fgdc1998 (test.test_fileExt.TestFileExt) ... ok
-test_fgdc1999 (test.test_fileExt.TestFileExt) ... FAIL
-test_isotc211 (test.test_fileExt.TestFileExt) ... ok
-test_isotc211_noaa (test.test_fileExt.TestFileExt) ... ok
-test_isotc211_pangaea (test.test_fileExt.TestFileExt) ... ok
-test_mercury (test.test_fileExt.TestFileExt) ... ok
-test_onedcx (test.test_fileExt.TestFileExt) ... ok
-test_resourcemap (test.test_fileExt.TestFileExt) ... ok
-
-======================================================================
-FAIL: test_fgdc1999 (test.test_fileExt.TestFileExt)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "/Users/pratikshrivastava/Desktop/OneDrive - University of Illinois - Urbana/Box/GitHub/DataONE/internship2018/file_identification/test/test_fileExt.py", line 37, in test_fgdc1999
-    self.assertEqual(getFileExt("examples/fgdc-1999/"+fileName), 'FGDC-STD-001-1999', "Incorrect File extension for file: {0}" .format(fileName))
-AssertionError: 'ASCII text, with very long lines' != 'FGDC-STD-001-1999'
-- ASCII text, with very long lines
-+ FGDC-STD-001-1999
- : Incorrect File extension for file: 09_fgdc-1999.xml
-
-----------------------------------------------------------------------
-Ran 13 tests in 0.221s
-
-FAILED (failures=1)
+<FileFormat name="isotc211">
+    <namespaces>
+      <namespace prefix="gco" uri="http://www.isotc211.org/2005/gco" />
+      <namespace prefix="gmd" uri="http://www.isotc211.org/2005/gmd" />
+      <namespace prefix="gmi" uri="http://www.isotc211.org/2005/gmi"/>
+    </namespaces>
+    <metadataFields>
+      <field label="Title">
+        //gmd:MD_DataIdentification/gmd:citation/gmd:CI_Citation/gmd:title
+      </field>
+      <field label="Creator">
+        //gmd:CI_ResponsibleParty[contains(gmd:role/gmd:CI_RoleCode, 'principalInvestigator') or contains(gmd:role/gmd:CI_RoleCode,'author')]/gmd:individualName
+      </field>          
+    </metadataFields>
+</FileFormat>
 ```
+
 
 
 ## References:
