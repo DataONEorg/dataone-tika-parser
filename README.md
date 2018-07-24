@@ -4,12 +4,8 @@
   * [DataONE File Formats](#dataone-file-formats)
   * [Apace Tika](#apache-tika)
   * [Using DataONE MetaDataParser](#using-dataone-metadataparser)
+    *  [Steps for using the application](#steps-for-using-the-application)
   * [Adding New File Format](#adding-new-file-format)
-
-* [Using](Creating-and-Using-custom-magic-file)
-  * [Magic File format](#magic-file-format)
-  * [DataONE magic file](#dataone-magic-file)
-  * [Compiling magic files](#compiling-magic-files)
 
 * [References](#References)
 
@@ -41,42 +37,29 @@ Apache Tika toolkit provides the functionality for detecting the mimetypes of a 
 
 
 ### Using DataONE MetaDataParser:
-The DataONEm Metadata Parser 
+The DataONEm Metadata Parser is a command line application, for extracting the standard metadata fields specified in the configuration file based on the file type detected. The application uses Apache Tika toolkit for file type detection and parsing. The application has an XML parser class for reading the config.xml file and extracts the metadata fields of interest for the file type detected. It uses these fields for parsing the input file and displays the result on the command line.
 
-## Creating and Using custom magic file:
-
-### Magic File format
-The magic files consist of multiple lines where each line in the file specifies a test. Each test is made up of 4 items, which are separated by one or more whitespace characters:
-
-  ***offset*** – specifies the offset, in bytes, into the file of the data which is to be tested.
-  ***type*** – the type of the data to be tested (see here for a list of all possible values) .
-  ***test*** – the value to be compared with the value from the file.
-  ***message*** – the message to be printed if the comparison succeeds
-
-  For more details about the  magic source format can be found in [man pages](http://manpages.ubuntu.com/manpages/precise/en/man5/magic.5.html).
-
-### DataONE magic file
-
-The [dataone.mgc](https://github.com/DataONEorg/file_identification/blob/master/magic_files/dataONE) file is created for testing 13 different scientific file formats using string and regex . This is a compiled version containing only the magic numbers for the DataONE file formats. Below is a snapshot of the file:
+#### Steps for using the application
+The latest jar files for the application are stored in the [jar]() folder. Use the below command for executing the application by specifying the input file name.
+```
+$ java -classpath tika-app-1.18.jar:dataoneMetadataParser_v1.0.jar:custom-mimetypes.jar org.dataone.parser.DataOneMetaDataParser ../../file_identification/examples/eml-211/00_eml-211.xml
+```
+Below is the output for the above command:
 
 ```
-0	string <?xml
->&0	regex (eml)-[0-9].[0-9].[0-9]+ eml://ecoinformatics.org/%s
-```
+-----------------------------------------------------------------------------
+FILE FORMAT :text/xml; formatid="eml://ecoinformatics.org/eml-2.1.1"
+-----------------------------------------------------------------------------
+Title: USA National Phenology Network (USA-NPN) Plant and Animal Phenology Data for the United States, 2008
+Creator: USA National Phenology Network (USA-NPN)
+Description: In response to the growing need to understand the response of plant and animal species to environmental variation and climate change and to develop a widespread baseline against which future phenological change may be measured, a consortium of scientists and agencies organized the USA-NPN, with a mandate to collect and share phenology data. More information on the USA-NPN can be found at http://www.usanpn.org/about.As of January 1, 2013, the dataset contains phenology data on 591 species of plants and animals, with 7,512 locations registered across the United States. Protocols used are documented in Denny et. al., Submitted (contact nco@usanpn.org for more information). Data were collected using the phenophase status approach (Thomas et. al., 2010; Denny et. al. Submitted). Latitude and longitude given in WGS84 Datum. This is a suite of yearly data sets (Plants beginning in 2009, Animals beginning in 2010) each provided with and without full phenophase definitions.Supplemental Information:Denny, E.G., K.L. Gerst, A.J. Miller-Rushing, G.L. Tierney, T.M. Crimmins, C.A.F. Enquist, P. Guertin, A.H. Rosemartin, M.D. Schwartz, K.A. Thomas and J.F. Weltzin. Submitted. Standardized phenology monitoring methods to track plant and animal activity for science and resource management applications.Thomas, K.A., E.G. Denny, A.J. Miller-Rushing, T.M. Crimmins, and J.F. Weltzin. 2010. The National Phenology Monitoring System v0.1. USA-NPN Technical Series 2010-001. www.usanpn.org.
+Contributor: USA National Phenology Network
+Contributor: Alyssa; Rosemartin
+Coverage: United States; -124.36; -52.78; 49.25; 29.53
+Coverage: 2008
+Rights: The USA-NPN National Coordinating Office (nco@usanpn.org), referred to as the “USA-NPN,” as operator of the USA-NPN Website, requires all users, referred to as “Users,” who have access to USA-NPN data via the Website to abide by the following terms of this USA-NPN Data Use Policy. 1. Data accessible via the USA-NPN National Phenology Database and Site are openly and universally available to all users. 2. The USA-NPN is not responsible for data content or the use of the data. 3. Neither the USA-NPN nor its employees or contractors is liable or responsible for the content of data, or for any loss, damage, claim, cost, or expense, however it may arise, from an inability to use the USA-NPN National Phenology Database and Site. 4. The USA-NPN disclaims all liability for and makes no warranties, expressed or implied, with respect to these products and their manufacturers, including without limitation, any implied warranties or merchantability or fitness for a particular purpose. 5. While substantial efforts are made to ensure the accuracy of USA-NPN data and documentation contained in a data set, complete accuracy of data and metadata cannot be guaranteed. All USA-NPN data and metadata are made available “as is.” Users of USA-NPN data hold all parties involved in the production and distribution of a data set harmless for damages resulting from its use or interpretation.  Disclaimer: While substantial efforts are made to ensure the accuracy of USA-NPN data and documentation contained in a data set, complete accuracy of data and metadata cannot be guaranteed. All USA-NPN data and metadata are made available "as is." Users of USA-NPN data hold all parties involved in the production and distribution of a data set harmless for damages resulting from its use or interpretation.
 
-In the first line the, a string containing the xml tag is searched, if it matches, than it searches for pattern the (eml)-[0-9].[0-9].[0-9] in the string using regex. If the pattern is found than it prints the message **eml://ecoinformatics.org/%s** followed by the version from the matched pattern.
-
-### Compiling magic files:
-
 ```
-  file -C -m dataone
-```
-### Using custom magic files:
-
-```
-file -m dataone.mgc example/eml-200/*
-```
-
 ## Installing and Using dataone magic file:
 
 ### On Linux:
