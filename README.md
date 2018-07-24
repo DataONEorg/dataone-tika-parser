@@ -64,15 +64,25 @@ Rights: The USA-NPN National Coordinating Office (nco@usanpn.org), referred to a
 
 ```
 ### Adding New File Format
-The application performs two steps, first identifying the file format and second extraction of the metadata. It uses Tika tool kit ability for detecting the file types using a custom-mimetypes.xml file which can be used for adding new file formats for identifiation. For the second step, it uses the conFig.xml file for extracting the standard metadata fields for the new file formats defined in it. Hence, the below two steps are needed for successfully adding the new file type and extracting the metadata fields of interest.
+The application performs two steps, first identifying the file format and second extraction of the metadata. It uses Tika tool kit ability for detecting the file types using a custom-mimetypes.xml file which can be used for adding new file formats for identification. For the second step, it uses the conFig.xml file for extracting the standard metadata fields for the new file formats defined in it. And to extract, the metadata properties, it needs the correct XPath values, which are defined in the `config.Properties` file. Hence, the below two steps are needed for successfully adding the new file type and extracting the metadata fields of interest.
 #### Update custom-mimetypes.xml file
-For updating the custom-mimetypes.xml file refer to the [readme]https://github.com/DataONEorg/file_identification/tree/master/Apache_tika#creation-of-custom-mimetypes.
+For updating the custom-mimetypes.xml file refer to the [readme](https://github.com/DataONEorg/file_identification/tree/master/Apache_tika#creation-of-custom-mimetypes).
+
+#### Add Entries in cofig.Properties file
+In the `config.Properties` file add the new formatId as the key and the XPath as the value for retrieving the metadata fields from the `configFile.xml `
+```
+## XPath for the FGDC
+FGDC-STD-001-1998=//FileFormats/FileFormat[@name='fgdc-001-1998']/*
+
+## XPath for isotc211
+http\://www.isotc211.org/2005/gmd=//FileFormats/FileFormat[@name='isotc211']/*
+```
 
 #### Update conFig.xml file
 Once, the new file is detected we need to create an entry for it in the conFig.xml file as below:
 If the new file format uses the prefix with the namespace, than we need to add the   `<namespace> ` tags with "prefix" and "uri" attributes or else it can be ignored.
 
-The field tags uses the `label` attribute for replacing the Xpath expression with common label across the different file formats. 
+The field tags uses the `label` attribute for replacing the Xpath expression with common label across the different file formats.
 
 ```
 <FileFormat name="isotc211">
@@ -95,9 +105,8 @@ The field tags uses the `label` attribute for replacing the Xpath expression wit
 
 
 ## References:
-  * https://github.com/file/file
-  * http://openpreservation.org/blog/2012/08/09/magic-editing-and-creation-primer
-  * https://linux.die.net/man/1/file
-  * https://filemagic.readthedocs.io/en/latest/guide.html
-  * http://pythontesting.net/framework/unittest/unittest-introduction/
-  * http://www.patricksoftwareblog.com/python-unit-testing-structuring-your-project/
+  * http://tika.apache.org
+  * https://github.com/apache/tika
+  * https://jeszysblog.wordpress.com/2012/03/05/file-type-detection-with-apache-tika/
+  * https://www.mkyong.com/java/how-to-read-xml-file-in-java-dom-parser/
+  * http://www.vogella.com/tutorials/JavaXML/article.html

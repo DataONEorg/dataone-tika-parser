@@ -14,11 +14,13 @@ package org.dataone.metadata;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
@@ -62,6 +64,9 @@ public class DataOneMapper
 	
 	public String getXpath(String fileType) throws SAXException, IOException, ParserConfigurationException {
 		String xPath="" ; 
+		String formatId = ""; 
+		
+		/*
 		if ( fileType.contains("eml-2.1.1")) {
 			 xPath = "//FileFormats/FileFormat[@name='eml-211']/*";
 		}
@@ -104,6 +109,11 @@ public class DataOneMapper
 		else {
 			 xPath ="Default"; 
 		}
+		*/
+		
+		formatId = fileType.substring(fileType.indexOf("=")+1); 
+	  	xPath = getProperty(formatId.substring(1,formatId.length()-1));
+	  	//System.out.println(xPath);
 		return xPath;
 	}
 	
@@ -193,9 +203,6 @@ protected String concatVal(Collection<? extends String> metaDataObj) {
 			
 			result = result.trim() + "; " +text.trim()  ; 
 		}
-		else {
-			//System.out.println("PRATIK" + text);
-		}
 	}
 	if (result.length() > 0 ){
 		result = result.substring(1);
@@ -247,4 +254,34 @@ protected String concatVal(Collection<? extends String> metaDataObj) {
 	      }
 	      return metaData;
 		}
+	
+	public String  getProperty(String formatId) {
+		Properties prop = new Properties();
+		InputStream input = null;
+		String value = "";
+		try {
+
+			input = new FileInputStream("config.Properties");
+
+			// load a properties file
+			prop.load(input);
+
+			value = prop.getProperty(formatId);	
+			if (value == null) {
+				value = "Default";
+			}
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		return value; 
+	}
+
 }

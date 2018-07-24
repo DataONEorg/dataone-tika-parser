@@ -67,6 +67,7 @@ public class DataOneMetaDataParser {
     	
     	TikaConfig config = new TikaConfig("tika-config.xml");
     	Tika tika = new Tika(config);
+    	
 
     	// Create DataOneMapper objects for file mapping the file and metadata fields. .
     	/**
@@ -80,17 +81,14 @@ public class DataOneMetaDataParser {
   	  		
   	  	  	//detecting the file type using detect method
   	  		// replace the escape characters. 
-  	  		
-  			//TikaConfig config = new TikaConfig("tika-config.xml");
-  			//Detector detector = config.getDetector();
-  			
+
   	  		//fileType = detector.detect(inpFile, "");
   	  		fileType = tika.detect(inpFile);  	  		
   	  		fileType = fileType.replaceAll("\\\\", "");
   	  		
+  	  		
   	  		// get the xPath for the meta data fields for the file type. 
   	  		String xPath =  mapper.getXpath(fileType);
-  	  		
   	  		
   	  		/** This step checks if the filetype is Default type or DataONE
   	  		 *  If Default type,  then Tika's AutoDetectParser is used for getting the contents,
