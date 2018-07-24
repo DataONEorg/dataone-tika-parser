@@ -5,6 +5,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
 import org.apache.tika.Tika;
+import org.apache.tika.config.TikaConfig;
+import org.apache.tika.detect.Detector;
 import org.apache.tika.exception.TikaException;
 import org.apache.tika.metadata.Metadata;
 import org.dataone.metadata.*;
@@ -62,7 +64,9 @@ public class DataOneMetaDataParser {
     	/**
     	 * This step creates a Tika Object for File Detection. 
   	   	 */
-    	Tika tika = new Tika();
+    	
+    	TikaConfig config = new TikaConfig("tika-config.xml");
+    	Tika tika = new Tika(config);
 
     	// Create DataOneMapper objects for file mapping the file and metadata fields. .
     	/**
@@ -76,6 +80,11 @@ public class DataOneMetaDataParser {
   	  		
   	  	  	//detecting the file type using detect method
   	  		// replace the escape characters. 
+  	  		
+  			//TikaConfig config = new TikaConfig("tika-config.xml");
+  			//Detector detector = config.getDetector();
+  			
+  	  		//fileType = detector.detect(inpFile, "");
   	  		fileType = tika.detect(inpFile);  	  		
   	  		fileType = fileType.replaceAll("\\\\", "");
   	  		
