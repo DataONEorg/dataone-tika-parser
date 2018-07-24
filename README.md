@@ -3,8 +3,9 @@
 * [Purpose](#purpose):
   * [DataONE File Formats](#dataone-file-formats)
   * [Apace Tika](#apache-tika)
-  * [Using DataONE MetaDataParser](#using-dataone-metadataparser)
-    *  [Steps for using the application](#steps-for-using-the-application)
+
+* [Using DataONE MetaDataParser](#using-dataone-metadataparser)
+  * [Steps for using the application](#steps-for-using-the-application)
   * [Adding New File Format](#adding-new-file-format)
 
 * [References](#References)
