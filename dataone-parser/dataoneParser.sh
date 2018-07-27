@@ -1,4 +1,4 @@
-#! /usr/bin/shell
+#! /bin/sh
 
 fileName=$1 
 
